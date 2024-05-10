@@ -1,0 +1,100 @@
+.section_banner{
+    height: 100vh;
+}
+.section_banner .cont_banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.section_banner .cont_banner .fondo_banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #00000070;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    cursor: pointer;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz{
+    background-color: #0000006e;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-header{
+    padding: 30px 50px !important; 
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-header h5{
+    color: #ffffff;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-header button{
+    color: #ffffff;
+    float: right;
+    padding: 0px;
+    position: absolute;
+    right: 20px;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-body{
+    padding: 30px 50px !important;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner ul{
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner ul li{
+    padding: 25px 0px;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner ul li a{
+    padding: 5px 0px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner ul li:hover a{
+    border-bottom: 1px solid #ffffff;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-bottom{
+    padding: 30px 50px !important;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-bottom ul li{
+    padding: 10px 0px; 
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-bottom .lenguaje{
+    margin: 30px 0px 0px 0px;
+}
+.section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-bottom .lenguaje a{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner a{
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    width: 190px;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #ffffff;
+    padding: 12px 14px 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner a img{
+    width: 31px;
+    height: auto !important;
+}
+.section_banner .cont_banner .img_banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
