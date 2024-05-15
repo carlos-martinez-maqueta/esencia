@@ -60,7 +60,11 @@
                     </div>
                 </div>
                 <div class="btn_boook_banner ">
-                    <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BOOK NOW <img src="assets/img/btn-book-now.svg" alt=""></a>
+                    <a class="book_now_a" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        BOOK NOW 
+                        <img src="assets/img/btn-book-now.svg" alt="" class="blanco">
+                        <img src="assets/svg/dark.svg" alt="" class="negro">
+                    </a>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5> -->

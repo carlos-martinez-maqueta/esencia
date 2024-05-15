@@ -90,6 +90,22 @@ color: #CBCBCB !important;
     display: flex;
     align-items: center;
 }
+.section_banner .cont_banner .fondo_banner .btn_boook_banner .blanco{
+    display: inline-flex;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner .negro{
+    display: none;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner .book_now_a:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner .book_now_a:hover .blanco{
+    display: none;
+}
+.section_banner .cont_banner .fondo_banner .btn_boook_banner .book_now_a:hover .negro{
+    display: inline-flex;
+}
 .section_banner .cont_banner .fondo_banner .btn_boook_banner a{
     font-family: "Montserrat", sans-serif;
     letter-spacing: 2px;

@@ -9,7 +9,7 @@
                                 <h4>SERVICES</h4>
 
                                 <ul>
-                                    <li><a href="places" class="hov">Vip Experience</a></li>
+                                    <li><a href="#" class="hov">Vip Experience</a></li>
                                     <li><a href="events" class="hov">Events & Productions</a></li>
                                     <!-- <li><a href="vip-experience" class="hov">Vip Experience</a></li> -->
                                 </ul>
@@ -21,8 +21,8 @@
 
                                 <ul>
                                     <li><a href="about" class="hov">About Us</a></li>
-                                    <li><a href="" class="hov">Blog & News</a></li>
-                                    <li><a href="" class="hov">Work with Us</a></li>
+                                    <li><a href="#" class="hov">Blog & News</a></li>
+                                    <li><a href="#" class="hov">Work with Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -31,10 +31,10 @@
                                 <h4>TERMS</h4>
 
                                 <ul>
-                                    <li><a href="terms-and-conditions" class="hov">Terms and Conditions</a></li>
-                                    <li><a href="contact-us" class="hov">Terms of Service</a></li>
-                                    <li><a href="faq" class="hov">Privacy Policies</a></li>
-                                    <li><a href="faq" class="hov">Cancellation Policies</a></li>
+                                    <li><a href="#" class="hov">Terms and Conditions</a></li>
+                                    <li><a href="#" class="hov">Terms of Service</a></li>
+                                    <li><a href="#" class="hov">Privacy Policies</a></li>
+                                    <li><a href="#" class="hov">Cancellation Policies</a></li>
                                 </ul>                                
                             </div>
                         </div>  
@@ -43,8 +43,8 @@
                                 <h4>CONTACT</h4>
 
                                 <ul>
-                                    <li><a href="contact-us" class="hov">Contact Us</a></li>
-                                    <li><a class="hov">F.A.Q</a></li>
+                                    <li><a href="#" class="hov">Contact Us</a></li>
+                                    <li><a href="#" class="hov">F.A.Q</a></li>
                                     <li><a href="#" class="hov">sales@esencia-house.com</a></li>
                                 </ul>
                             </div>
@@ -65,13 +65,13 @@
 
                                 <ul>
                                     <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="hov">Book Now</a></li>
-                                    <li><a href="login" class="hov">Sign In</a></li>
-                                    <li><a href="register" class="hov">Sign Up</a></li>
+                                    <li><a href="#" class="hov">Sign In</a></li>
+                                    <li><a href="#" class="hov">Sign Up</a></li>
                                     <li>
                                         <ul class="d-flex idiomas_le">
-                                            <li class="me-3"><a href="">EN</a></li>
+                                            <li class="me-3"><a href="#">EN</a></li>
                                             <li class="me-3" style="color: #ffffff;"> / </li>
-                                            <li class="me-3"><a href="es">ES</a></li>
+                                            <li class="me-3"><a href="#">ES</a></li>
                                         </ul>
                                     </li>
                                 </ul>

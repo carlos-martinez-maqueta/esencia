@@ -50,6 +50,10 @@
   border-color: #666666;
   color: #666666;
 }
+.section_events .service .info_service form label{
+  font-family: 'Gotham';
+  font-size: 12px;
+}
 .section_events .service .info_service form input::placeholder {
   color: #666666;
 }

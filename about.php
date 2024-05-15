@@ -14,11 +14,13 @@
  <style>
       .section_about .col_hormiga{
     padding: 70px 0px 40px;
+    font-size: 12px;
   }
       .section_about .col_hormiga img{
     width: 20px;
   }
   .section_about .col_hormiga a{
+    font-size: 12px;
     text-decoration: none;
     color: #000000;
     font-family: 'Gotham';
@@ -32,13 +34,30 @@
   }
   .section_about .col_hormiga h2{
     font-family: 'FreightDisp Medium';
-    font-style: italic;
+    
     font-size: 64px;
   }
-  .section_about .sec_about p{
+  .section_about  p{
 font-family: 'FreightDisp Medium';
 font-size: 36px;
-font-style: italic;
+position: relative;
+width: fit-content;
+
+  }
+  .section_about .p_lineas:after{
+        display: block;
+    position: absolute;
+    content: "";
+    height: .125rem;
+    bottom: -.3125rem;
+    top: auto;
+    left: 0;
+    right: 100%;
+    background: #000000;
+    transition: right .25s ease-in-out; 
+  }
+  .section_about .p_lineas:hover:after{
+right: 0;
   }
    .section_about .sec_about span{
     font-family: 'Gotham';
@@ -47,7 +66,7 @@ font-style: italic;
    .section_about .sec_meet p{
     font-family: 'FreightDisp Medium';
     font-size: 36px;
-    font-style: italic;
+    
   }
      .section_about .sec_meet span{
     font-family: 'Gotham';
@@ -69,7 +88,7 @@ font-style: italic;
 
                 <div class="row align-items-center">
                     <div class="col-lg-6 sec_about">
-                      <p>ABOUT US</p>
+                      <p class="p_lineas">ABOUT US</p>
 
                       <span>We are a real state company that offers an exclusive selection of villas luxury, located mostly in Tulum, Mexico. These villas are designed for a specific target audience looking for uniqu experiences. Our properties are
                       stand out for their impressive features, such as large spaces, swimming pools and other luxury amenities</span>
@@ -81,17 +100,17 @@ font-style: italic;
 
                 <div class="row">
                   <div class="col-lg-12 sec_meet">
-                    <p>¡MEET OUR TEAM!</p>
+                    <p class="p_lineas">¡MEET OUR TEAM!</p>
                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span>
                   </div>
 
-                  <div class="col-lg-3 mt-5">
+<!--                   <div class="col-lg-3 mt-5">
                     <div class="car_team">
                       <img src="assets/img/Avatar.png" class="img-fluid mb-3">
                       <p>Nombre Apellido</p>
                       <p>Product Lead</p>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
             </div>
         </section>
