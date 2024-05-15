@@ -2,30 +2,61 @@
 .footer_all{
     margin-top: 60px;
     background-color: #000000;
-    padding: 80px 0px 30px 0px;
+    padding: 50px 0px 30px 0px;
 }
 .footer_all .list_alls h4{
         font-family: FreightDisp Medium;
-    font-style: italic;
+        letter-spacing: 1px;
+        font-size: 16px;
     color: #FFFFFF;
-    margin-bottom: 38px;
+    margin-bottom: 20px;
+/*    font-weight: 600;*/
 }
 .footer_all .list_alls .bottom_ul{
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 .footer_all .list_alls ul{
     padding: 0px;
     list-style: none;
 }
 .footer_all .list_alls ul li{
-    padding: 10px 0px;
+    padding: 6px 0px;
 }
 .footer_all .list_alls ul li a{
+
+    position: relative;
     font-family: 'Gotham';                                         
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     text-decoration: none;
-    color: #ffffff;
+    color: #f2f2f2;
+}
+.footer_all .list_alls ul li .hov:after{
+    display: block;
+    position: absolute;
+    content: "";
+    height: .125rem;
+    bottom: -.3125rem;
+    top: auto;
+    left: 0;
+    right: 100%;
+    background: #ffffff;
+    transition: right .25s ease-in-out;  
+}
+.footer_all .list_alls ul li .hov:hover:after {
+    right: 0;
+}
+.redes_s li{
+padding: 6px 0px;
+}
+.idiomas_le a{
+    text-decoration: underline !important;
+    line-height: 2;
+}
+.footer_all .row_mini_footer{
+        border-top: 1px solid #f2f2f2aa;
+    padding: 37px 0px 0px 0px !important;
+    margin: 20px 0px 0px 0px;
 }
 .footer_all .row_mini_footer p{
     font-family: Montserrat;
@@ -36,4 +67,11 @@
     font-family: Montserrat;
     color: #ffffff;
     font-size: 12px;
+}
+.whatstapp-link{
+    position: fixed;
+    z-index: 10001;
+    bottom: 10px;
+    right: 10px;
+    line-height: 0;
 }

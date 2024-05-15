@@ -16,17 +16,27 @@ padding-bottom: 50px;
   padding: 12px 0px;
 }
 .header_dos .col_lista_header ul li a{
-  font-family: FreightDisp Medium;
+  font-family: 'Gotham';
   color: #000000;
-  font-size: 16px;
+  font-size: 12px;
   text-decoration: none;
 }
 .header_dos .col_lista_header ul .login_li a{
-  padding: 12px 48px;
+  padding: 12px 30px;
   border: 1px solid #110F0F;
 }
+.header_dos .col_lista_header ul .login_li a:hover{
+background-color: #110F0F;
+color: #ffffff;
+}
 .header_dos .col_lista_header ul .register_li a{
-  padding: 14px 48px;
+  padding: 14px 30px;
   background-color: #110F0F;
   color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.header_dos .col_lista_header ul .register_li a:hover{
+  border: 1px solid #110F0F;
+  background-color: transparent;
+  color: #110F0F;
 }
