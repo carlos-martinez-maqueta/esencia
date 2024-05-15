@@ -28,7 +28,7 @@ $(document).ready(function () {
                 if (response.status === 'success') {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Acceso concedido',
+                        title: 'Access granted',
                         text: response.message
                     }).then(function(result) {
                         if (result.isConfirmed) {
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Acceso denegado',
+                        title: 'Access denied',
                         text: response.message
                     });
                 }
