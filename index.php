@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/home.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -127,17 +128,18 @@
     </section>
     <section class="section_point">
         <div class="">
-            <img src="assets/img/point.png" class="img-fluid w-100">
+            <img src="assets/img/point.png" class="d-lg-block d-none w-100">
+            <img src="assets/img/banner_boletin_responsive.png" class="d-lg-none d-block w-100">
         </div>
     </section>
     <section class="section_boletin">
         <div class="container-fluid">
            <div class="row ">
                 <div class="col-lg-6 banner_boletin p-0">
-                    <img src="assets/img/banner_boletin.png">
+                    <img src="assets/img/banner_boletin.png" class="d-lg-block d-none ">
                 </div>
                 <div class="col-lg-6  fondo_boletin_form">
-                    <div class="px-5">
+                    <div class="px-lg-5 px-3">
                         <h3 class="mb-3">Stay UPDATED</h3>
                         <p class="mb-5">SUBSCRIBE TO OUR NEWLESTTER</p>
 

@@ -4,7 +4,7 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-10 list_alls">
                     <div class="row">
-                        <div class="col-lg-4 bottom_ul">
+                        <div class="col-lg-4 col-6 bottom_ul">
                             <div>
                                 <h4>SERVICES</h4>
 
@@ -15,7 +15,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4 bottom_ul">
+                        <div class="col-lg-4 col-6 bottom_ul">
                             <div>
                                 <h4>ABOUT</h4>
 
@@ -25,7 +25,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4 bottom_ul">
+                        <div class="col-lg-4 col-6 bottom_ul">
                             <div>
                                 <h4>EXPERIENCE</h4>
 
@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-6">
                             <div>
                                 <h4>USER</h4>
 
@@ -44,14 +44,14 @@
                                     <li><a href="register">Register</a></li>
                                     <li>
                                         <ul class="d-flex">
-                                            <li><a href="">EN <img class="mx-3" src="assets/img/en.svg"></a></li>
-                                            <li><a href="es">ES <img class="mx-3" src="assets/img/es.svg"></a></li>
+                                            <li><a href="">EN <img class="mx-lg-3 mx-1" src="assets/img/en.svg"></a></li>
+                                            <li><a href="es">ES <img class="mx-lg-3 mx-1" src="assets/img/es.svg"></a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-6">
                             <div>
                                 <h4>CONTACT US</h4>
 
@@ -62,7 +62,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-12">
                             <div>
                                 <h4>SOCIAL NETWORKS</h4>
 
@@ -79,10 +79,10 @@
             </div>
 
             <div class="row row_mini_footer pt-4">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-6">
                     <p>Development by <a href="dintecsolutions.com">DINTEC solutions</a></p>
                 </div>
-                <div class="col-lg-6 text-end">
+                <div class="col-lg-6 col-6 text-lg-end text">
                     <p>Copyright © 2024 ESENCIA</p>
                 </div>
             </div>
