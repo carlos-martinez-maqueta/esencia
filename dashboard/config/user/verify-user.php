@@ -23,13 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $response = array(
             'status' => 'success',
-            'message' => 'Usuario autenticado correctamente.'
+            'message' => 'Successfully authenticated user.'
         );
     } else {
         // Usuario no encontrado o contraseña incorrecta
         $response = array(
             'status' => 'error',
-            'message' => 'Usuario o contraseña incorrectos.'
+            'message' => 'Incorrect username or password.'
         );
     }
 

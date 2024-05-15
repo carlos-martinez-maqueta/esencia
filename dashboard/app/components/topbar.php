@@ -16,9 +16,8 @@
                         <i class="fas fa-user me-2"></i><?= $userObj->username ?>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="account-settings"><i class='bx bx-cog' ></i> Settings</a></li>
+                        <li><a class="dropdown-item" href="app/components/logout.php"><i class='bx bx-exit'></i> Logout</a></li>
                     </ul>
                 </li>
             </ul>
