@@ -1,0 +1,39 @@
+/*FOOTER ALL*/
+.footer_all{
+    margin-top: 60px;
+    background-color: #000000;
+    padding: 80px 0px 30px 0px;
+}
+.footer_all .list_alls h4{
+        font-family: FreightDisp Medium;
+    font-style: italic;
+    color: #FFFFFF;
+    margin-bottom: 38px;
+}
+.footer_all .list_alls .bottom_ul{
+    margin-bottom: 70px;
+}
+.footer_all .list_alls ul{
+    padding: 0px;
+    list-style: none;
+}
+.footer_all .list_alls ul li{
+    padding: 10px 0px;
+}
+.footer_all .list_alls ul li a{
+    font-family: 'Gotham';                                         
+    font-style: normal;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer_all .row_mini_footer p{
+    font-family: Montserrat;
+    font-size: 12px;
+    color: #ffffff;
+}
+.footer_all .row_mini_footer p a{
+    font-family: Montserrat;
+    color: #ffffff;
+    font-size: 12px;
+}
