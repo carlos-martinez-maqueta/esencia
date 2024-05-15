@@ -1,0 +1,63 @@
+.section_events .col_hormiga{
+  padding: 70px 0px;
+}
+.section_events .col_hormiga img{
+  width: 20px;
+}
+.section_events .col_hormiga a{
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Gotham';
+}
+.section_events .col_hormiga a b{
+  font-family: 'Gotham Bold';
+}
+.section_events .service .info_service p{
+  font-size: 36px;
+  font-family: 'Gotham Bold';
+  color: #000000;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+.section_events .service .efect_text{
+  text-align: right;
+  font-family: 'Gotham';
+  font-size: 22px;
+  position: relative;
+}
+.section_events .service .efect_text .linea{
+  border-top: 1px solid #000000;
+  width: 40px;
+  position: absolute;
+  right: 0px;
+  top: -4px;
+}
+.section_events .service .info_service span{
+  font-family: 'Gotham';
+}
+.section_events .service .info_service form{
+  margin-top: 40px;
+
+}
+.section_events .service .info_service form input{
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0px;
+  border-color: #666666;
+  color: #666666;
+}
+.section_events .service .info_service form input::placeholder {
+  color: #666666;
+}
+.section_events .service .info_service form button{
+  background-color: #110F0F;
+  border-radius: 0px;
+  color: #FFFFFF;
+  width: 176px;
+  padding: 17px;
+  font-family: FreightDisp Book;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 1px;
+}
