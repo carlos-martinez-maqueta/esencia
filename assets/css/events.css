@@ -1,10 +1,12 @@
 .section_events .col_hormiga{
   padding: 70px 0px;
+  font-size: 12px;
 }
 .section_events .col_hormiga img{
   width: 20px;
 }
 .section_events .col_hormiga a{
+  font-size: 12px;
   text-decoration: none;
   color: #000000;
   font-family: 'Gotham';
@@ -13,7 +15,7 @@
   font-family: 'Gotham Bold';
 }
 .section_events .service .info_service p{
-  font-size: 36px;
+  font-size: 30px;
   font-family: 'Gotham Bold';
   color: #000000;
   line-height: 1.2;
@@ -23,7 +25,7 @@
 .section_events .service .efect_text{
   text-align: right;
   font-family: 'Gotham';
-  font-size: 22px;
+  font-size: 14px;
   position: relative;
 }
 .section_events .service .efect_text .linea{
@@ -35,6 +37,7 @@
 }
 .section_events .service .info_service span{
   font-family: 'Gotham';
+  font-size: 14px;
 }
 .section_events .service .info_service form{
   margin-top: 40px;
@@ -47,6 +50,10 @@
   border-color: #666666;
   color: #666666;
 }
+.section_events .service .info_service form label{
+  font-family: 'Gotham';
+  font-size: 12px;
+}
 .section_events .service .info_service form input::placeholder {
   color: #666666;
 }
@@ -54,10 +61,10 @@
   background-color: #110F0F;
   border-radius: 0px;
   color: #FFFFFF;
-  width: 176px;
-  padding: 17px;
+ 
+  padding: 13px 20px;
   font-family: FreightDisp Book;
-  font-size: 16px;
+  font-size: 12px;
   line-height: normal;
   letter-spacing: 1px;
 }

@@ -77,7 +77,7 @@
             <div class="row py-5">
               <div class="col-lg-6">
                 <div class="card_place">
-                  <img src="assets/img/place.png" class="img-fluid w-100">
+                  <a href="detalle-place.php"><img src="assets/img/place.png" class="img-fluid w-100"></a>
                   <div class="row align-items-center pt-3">
                     <div class="col-6 name_place">
                       <p>Nature House</p>
@@ -88,8 +88,8 @@
                   </div>
                   <div class="ubicacion_personas">
                     <ul class="">
-                      <li><a href=""><img src="assets/img/ul-ubi.svg">Villa Escencia Tulum</a></li>
-                      <li><a href=""><img src="assets/img/ul-user.svg">8 Guest</a></li>
+                      <li><img src="assets/img/ul-ubi.svg">Villa Escencia Tulum</li>
+                      <li><img src="assets/img/ul-user.svg">8 Guest</li>
                     </ul>
                   </div>
                   <div class="price_place">
