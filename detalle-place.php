@@ -90,9 +90,6 @@ include 'dashboard/class/user.php';
       .card_compras .d_flex_price{
         display: flex;
       }
-      .card_compras .d_flex_price div{
-
-      }
     </style>
  
     <?php include 'app/footer.php'; ?>
