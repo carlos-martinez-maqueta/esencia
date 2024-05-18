@@ -1,0 +1,21 @@
+@media (max-width: 575.98px){
+    .section_about{
+        padding: 70px 0px 0px;
+    }
+    .section_about .card_about{
+        width: 93%;
+        position: relative;
+        left: auto;
+        margin: auto;
+        padding: 25px;
+        top: -70px; 
+    }
+    .section_about .card_about h3{
+        font-size: 30px;
+    }
+    .section_about .card_about .read_more{
+        margin: auto;
+    width: fit-content;
+    display: block;
+    }
+ }
