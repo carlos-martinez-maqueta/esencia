@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    var form = $("#add-timeline");
+    var form = $("#add-equipment");
 
     form.submit(function (e) {
         e.preventDefault();
 
         var formData5 = new FormData(this);
         $.ajax({
-            url: "config/folder/get-add-time.php",
+            url: "config/folder/add-equipment.php",
             method: "POST",
             data: formData5,
             processData: false,
@@ -52,7 +52,7 @@ $(document).ready(function () {
         });
     });
 });
-$(document).on("click", ".edit-timeline", function() {
+$(document).on("click", ".edit-equipment", function() {
     var tomelineId = $(this).data("id");
 
     // Realizar la petición AJAX para obtener la descripción
@@ -60,24 +60,20 @@ $(document).on("click", ".edit-timeline", function() {
         url: "config/folder/getFolder.php",
         method: "POST",
         data: {
-            action: "get_all_timeline_id",
+            action: "get_all_equiptment_id",
             tomelineId: tomelineId,
         },
         dataType: "json",
         success: function(data) {
 
-            $("#editTimeLineModal .modal-body #usuario_id").val(data.id);
-            $("#editTimeLineModal .modal-body #year").val(data.year);
-            // Asigna el valor de la descripción al textarea
-            $("#editTimeLineModal .modal-body #summer2").val(data.description);
+            $("#editEquipmentModal .modal-body #id").val(data.id);
+            $("#editEquipmentModal .modal-body #name").val(data.name);
+            $("#editEquipmentModal .modal-body #charge").val(data.charge);
+            $("#editEquipmentModal .modal-body #linkedin").val(data.linkedin);
+            $("#editEquipmentModal .modal-body #page").val(data.www);
+            $("#editEquipmentModal .modal-body #instagram").val(data.instagram);
+   
 
-            // Inicializa Summernote en el textarea
-            $('#summer2').summernote({
-                placeholder: 'Hello user',
-                tabsize: 2,
-                height: 150,
-                imageMaxSize: 5242880,
-            });
         },
     });
 });
@@ -85,14 +81,14 @@ $(document).on("click", ".edit-timeline", function() {
 
 
 $(document).ready(function() {
-    var form = $("#edit-form-timeline");
+    var form = $("#edit-form-equipment");
 
     form.submit(function(e) {
         e.preventDefault();
 
         var formData5 = new FormData(this);
         $.ajax({
-            url: "config/folder/get-edit-time.php",
+            url: "config/folder/edit-equipment.php",
             method: "POST",
             data: formData5,
             processData: false,
@@ -139,7 +135,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).on("click", ".danger-timeline", function() {
+$(document).on("click", ".danger-equipment", function() {
     var resultId = $(this).data("id");
 
     // Mostrar el mensaje de confirmación
@@ -157,7 +153,7 @@ $(document).on("click", ".danger-timeline", function() {
                 url: "config/folder/getFolder.php",
                 method: "POST",
                 data: {
-                    action: "delete_timeline_id",
+                    action: "delete_equipment_id",
                     resultId: resultId,
                 },
                 dataType: "json",

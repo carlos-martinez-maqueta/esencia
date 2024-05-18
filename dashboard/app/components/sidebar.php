@@ -18,8 +18,9 @@
                 <a class="collapse-item d-flex align-items-center gap-1 small mb-3" href="management-home"><i class='bx bx-label'></i> Home</a>
                 <a class="collapse-item d-flex align-items-center gap-1 small mb-3" href="management-about"><i class='bx bx-label'></i> About Us</a>
                 <a class="collapse-item d-flex align-items-center gap-1 small mb-3" href="management-timeline"><i class='bx bx-label'></i> Timeline</a>
+                <a class="collapse-item d-flex align-items-center gap-1 small mb-3" href="management-equipment"><i class='bx bx-label'></i> Equipment</a>
                 <a class="collapse-item d-flex align-items-center gap-1 small mb-3" href="management-service"><i class='bx bx-label'></i> Services</a>
-                <a class="collapse-item d-flex align-items-center gap-1 small" href="#"><i class='bx bx-label'></i> Place</a>
+                <a class="collapse-item d-flex align-items-center gap-1 small" href="management-space"><i class='bx bx-label'></i> Place</a>
             </div>
         </div>
     </div>
