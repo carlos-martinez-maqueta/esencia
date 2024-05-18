@@ -1,3 +1,8 @@
+<?php 
+include 'dashboard/config/conexion.php';
+include 'dashboard/class/folder.php';
+include 'dashboard/class/user.php';
+ ?>
 <!doctype html>
 <html lang="en">
   <head>

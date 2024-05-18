@@ -1,3 +1,9 @@
+    <?php
+
+    $socialObj = Folder::getSocialNetworks();
+
+    ?>
+
     <footer class="footer_all mt-">
         <div class="container">
             <div class="row">
@@ -35,9 +41,9 @@
                                     <li><a href="#" class="hov">Terms of Service</a></li>
                                     <li><a href="#" class="hov">Privacy Policies</a></li>
                                     <li><a href="#" class="hov">Cancellation Policies</a></li>
-                                </ul>                                
+                                </ul>
                             </div>
-                        </div>  
+                        </div>
                         <div class="col-lg-3 col-6">
                             <div>
                                 <h4>CONTACT</h4>
@@ -48,8 +54,8 @@
                                     <li><a href="#" class="hov">sales@esencia-house.com</a></li>
                                 </ul>
                             </div>
-                        </div>                                             
-<!--                         <div class="col-lg-3 col-6 bottom_ul">
+                        </div>
+                        <!--                         <div class="col-lg-3 col-6 bottom_ul">
                             <div>
                                 <h4>EXPERIENCE</h4>
 
@@ -83,13 +89,13 @@
                                 <!-- <h4>SOCIAL NETWORKS</h4> -->
 
                                 <ul class="d-flex redes_s">
-                                    <li><a href=""><img class="me-5" src="assets/img/ig.svg"></a></li>
-                                    <li><a href=""><img class="me-5" src="assets/img/fb.svg"></a></li>
-                                    <li><a href=""><img class="me-5" src="assets/img/lk.svg"></a></li>
-                                    <li><a href=""><img class="me-5" src="assets/img/st.svg"></a></li>
+                                    <li><a href="<?= $socialObj->instagram; ?>"><img class="me-5" src="assets/img/ig.svg"></a></li>
+                                    <li><a href="<?= $socialObj->facebook ;?>"><img class="me-5" src="assets/img/fb.svg"></a></li>
+                                    <li><a href="<?= $socialObj->linkedin ;?>"><img class="me-5" src="assets/img/lk.svg"></a></li>
+                                    <li><a href="<?= $socialObj->linkedin ;?>"><img class="me-5" src="assets/img/st.svg"></a></li>
                                 </ul>
                             </div>
-                        </div>                                                                                                
+                        </div>
                     </div>
                 </div>
             </div>
