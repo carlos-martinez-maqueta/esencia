@@ -65,8 +65,8 @@
 
                                 <ul>
                                     <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="hov">Book Now</a></li>
-                                    <li><a href="#" class="hov">Sign In</a></li>
-                                    <li><a href="#" class="hov">Sign Up</a></li>
+                                    <li><a href="sign-in" class="hov">Sign In</a></li>
+                                    <li><a href="sign-up" class="hov">Sign Up</a></li>
                                     <li>
                                         <ul class="d-flex idiomas_le">
                                             <li class="me-3"><a href="#">EN</a></li>

@@ -37,12 +37,11 @@
     
     font-size: 64px;
   }
-  .section_about  p{
-font-family: 'FreightDisp Medium';
-font-size: 36px;
-position: relative;
-width: fit-content;
-
+  .section_about  h5{
+    font-family: 'FreightDisp Medium';
+    font-size: 36px;
+    position: relative;
+    width: fit-content;
   }
   .section_about .p_lineas:after{
         display: block;
@@ -88,7 +87,7 @@ right: 0;
 
                 <div class="row align-items-center">
                     <div class="col-lg-6 sec_about">
-                      <p class="p_lineas">ABOUT US</p>
+                      <h5 class="p_lineas">ABOUT US</h5>
 
                       <span>We are a real state company that offers an exclusive selection of villas luxury, located mostly in Tulum, Mexico. These villas are designed for a specific target audience looking for uniqu experiences. Our properties are
                       stand out for their impressive features, such as large spaces, swimming pools and other luxury amenities</span>
@@ -98,19 +97,40 @@ right: 0;
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row mb-5">
                   <div class="col-lg-12 sec_meet">
-                    <p class="p_lineas">¡MEET OUR TEAM!</p>
+                    <h5 class="p_lineas">¡MEET OUR TEAM!</h5>
                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span>
                   </div>
 
-<!--                   <div class="col-lg-3 mt-5">
+                  <div class="col-lg-3 mt-5">
                     <div class="car_team">
                       <img src="assets/img/Avatar.png" class="img-fluid mb-3">
                       <p>Nombre Apellido</p>
                       <p>Product Lead</p>
                     </div>
-                  </div> -->
+                  </div>
+                  <div class="col-lg-3 mt-5">
+                    <div class="car_team">
+                      <img src="assets/img/Avatar.png" class="img-fluid mb-3">
+                      <p>Nombre Apellido</p>
+                      <p>Product Lead</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 mt-5">
+                    <div class="car_team">
+                      <img src="assets/img/Avatar.png" class="img-fluid mb-3">
+                      <p>Nombre Apellido</p>
+                      <p>Product Lead</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 mt-5">
+                    <div class="car_team">
+                      <img src="assets/img/Avatar.png" class="img-fluid mb-3">
+                      <p>Nombre Apellido</p>
+                      <p>Product Lead</p>
+                    </div>
+                  </div>                                                      
                 </div>
             </div>
         </section>
@@ -121,6 +141,14 @@ right: 0;
         text-align: center;
         padding: 40px;
         border-radius: 25px;
+        text-align: center;
+        box-shadow: 0px 6px 4px -1px #00000066;
+      }
+      .car_team p{
+        font-family: 'Gotham';
+        color: #2C2C2C;
+        font-size: 14px;
+        margin: 0px;
       }
     </style>
     <?php include 'app/footer.php'; ?>
