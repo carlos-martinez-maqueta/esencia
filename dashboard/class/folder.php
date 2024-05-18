@@ -189,4 +189,138 @@ class Folder
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         return $stmt;
     }
+
+    // EQUIPMENT
+    public static function getFolderEquipment()
+    {
+        global $conn;
+        $statement = $conn->prepare("SELECT * FROM tbl_equipment");
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+    public static function addEquiment($name, $charge, $linkedin, $page, $instagram)
+    {
+        global $conn;
+        $sql = "INSERT INTO tbl_equipment (name, charge, linkedin, www, instagram) 
+        VALUES (:name, :charge, :linkedin, :page, :instagram)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':charge', $charge);
+        $stmt->bindParam(':linkedin', $linkedin);
+        $stmt->bindParam(':page', $page);
+        $stmt->bindParam(':instagram', $instagram);
+        return $stmt;
+    }
+    public static function editEquipment($id, $name, $charge, $linkedin, $page, $instagram)
+    {
+        global $conn;
+        $sql = "UPDATE tbl_equipment SET name=:name, charge=:charge, linkedin=:linkedin, www=:page, instagram=:instagram WHERE id=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":id", $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':charge', $charge);
+        $stmt->bindParam(':linkedin', $linkedin);
+        $stmt->bindParam(':page', $page);
+        $stmt->bindParam(':instagram', $instagram);
+        return $stmt;
+    }
+    public static function editBannerEquipment($id, $banner)
+    {
+        global $conn;
+        $sql = "UPDATE tbl_equipment SET image=:banner WHERE id=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":id", $id);
+        $stmt->bindParam(':banner', $banner);
+        return $stmt;
+    }
+    public static function getEditEquipmentId($tomelineId)
+    {
+        global $conn;
+        // Consulta para obtener la descripción de la solicitud
+        $statement = $conn->prepare("SELECT * FROM tbl_equipment WHERE id= :tomelineId");
+        $statement->bindParam(':tomelineId', $tomelineId, PDO::PARAM_INT);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
+    public static function deleteEquipment($id)
+    {
+        global $conn;
+        $sql = "DELETE FROM tbl_equipment WHERE id = :id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt;
+    }
+    // SPACE
+
+    public static function getFolderSpace()
+    {
+        global $conn;
+        $statement = $conn->prepare("SELECT * FROM tbl_space");
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+    public static function getFolderSpaceId($id)
+    {
+        global $conn;
+        $statement = $conn->prepare("SELECT * FROM tbl_space WHERE id = :id");
+        $statement->bindValue(":id", $id);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
+    public static function addSpace($name, $location, $maximum_people, $price, $coordinates)
+    {
+        global $conn;
+        $sql = "INSERT INTO tbl_space (name, location, maximum_people, price, coordinate, state) 
+                VALUES (:name, :location, :maximum_people, :price, :coordinates, :state)";
+        $stmt = $conn->prepare($sql);
+    
+        $state = 'active';  // Define una variable para el estado
+    
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':location', $location);
+        $stmt->bindParam(':maximum_people', $maximum_people);
+        $stmt->bindParam(':price', $price);
+        $stmt->bindParam(':coordinates', $coordinates);
+        $stmt->bindValue(':state', $state);  // Usa la variable en lugar del valor literal
+    
+        return $stmt;
+    }
+    public static function editBannerSpaceMain($id, $banner)
+    {
+        global $conn;
+        $sql = "UPDATE tbl_space SET main_image=:banner WHERE id=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":id", $id);
+        $stmt->bindParam(':banner', $banner);
+        return $stmt;
+    }
+    public static function editSpaceId($id, $name, $location, $maximum_people, $coordinate, $state, $body, $price)
+    {
+        global $conn;
+        $sql = "UPDATE tbl_space SET name=:name, location=:location, maximum_people=:maximum_people, coordinate=:coordinate, body=:body, state=:state, price=:price WHERE id=:id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":id", $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':location', $location);
+        $stmt->bindParam(':maximum_people', $maximum_people);
+        $stmt->bindParam(':coordinate', $coordinate);
+        $stmt->bindParam(':state', $state);
+        $stmt->bindParam(':body', $body);
+        $stmt->bindParam(':price', $price);
+        return $stmt;
+    }
+
+    // LABELS
+    public static function getLabels()
+    {
+        global $conn;
+        $statement = $conn->prepare("SELECT * FROM tbl_labels");
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
 }

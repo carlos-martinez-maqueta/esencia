@@ -56,7 +56,7 @@ $timelineObj = Folder::getFolderTimeline();
     <div class="row mb-5">
         <?php foreach ($timelineObj as $result) : ?>
             <div class="col-xl-4 col-md-6 col-12">
-                <div class="card mb-4 py-3 border">
+                <div class="card mb-4 py-3 border shadow">
                     <div class="card-body row">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex align-items-center">
