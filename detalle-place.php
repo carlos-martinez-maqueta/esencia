@@ -1,3 +1,8 @@
+<?php 
+include 'dashboard/config/conexion.php';
+include 'dashboard/class/folder.php';
+include 'dashboard/class/user.php';
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -61,12 +66,31 @@
                 <h2 class="mt-2">NATURE HOUSE</h2>
               </div>
             </div>
-            
+            <div class="row mb-5">
+              <div class="col-lg-7"></div>
+              <div class="col-lg-5">
+                <div class="card_compras">
+                  <div class="d_flex_price">
+                    <div>$350 <span>/ night</span></div>
+                    <div><img src="assets/img//pay/star.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
  
           </div>
         </section>
     </main>
-    
+    <style>
+      .card_compras{
+        box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.2);
+        height: 420px;
+        border-radius: 15px;
+      }
+      .card_compras .d_flex_price{
+        display: flex;
+      }
+    </style>
  
     <?php include 'app/footer.php'; ?>
 

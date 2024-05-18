@@ -26,6 +26,26 @@ $homeObj = Folder::getFolderHome();
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/gotham-serif-bold?styles=140064" rel="stylesheet">
 
+    <script>
+        function updateCheckoutDate() {
+            const checkinInput = document.getElementById('checkin');
+            const checkoutInput = document.getElementById('checkout');
+
+            // Establecer la fecha mínima para el checkin (hoy)
+            const today = new Date().toISOString().split('T')[0];
+            checkinInput.min = today;
+
+            checkinInput.addEventListener('change', function() {
+                const checkinDate = new Date(this.value);
+                checkinDate.setDate(checkinDate.getDate() + 1);
+                const nextDay = checkinDate.toISOString().split('T')[0];
+                checkoutInput.value = nextDay;
+                checkoutInput.min = nextDay;  // Establecer la fecha mínima en el campo "CHECK OUT"
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCheckoutDate);
+    </script>                        
 </head>
 <style>
 
@@ -88,36 +108,37 @@ $homeObj = Folder::getFolderHome();
 
                             <p>Enjoy your stay at <br> Esencia Tulum</p>
 
-                            <form class="mt-5" method="POST" action="places">
+
+                           <form class="mt-5" method="POST" action="places.php">
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
-                                        <label for="">CHECK IN*</label>
-                                        <input type="date" class="form-control" id="" placeholder="">
+                                        <label for="checkin">CHECK IN*</label>
+                                        <input type="date" class="form-control" id="checkin" name="checkin">
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
-                                        <label for="">CHECK OUT*</label>
-                                        <input type="date" class="form-control" id="" placeholder="">
+                                        <label for="checkout">CHECK OUT*</label>
+                                        <input type="date" class="form-control" id="checkout" name="checkout">
                                     </div>
-                                </div>
+                                </div>                                                          
                                 <div class="mb-3 mt-4">
-                                    <label for="" class="form-label">DESTINATION <img src="assets/img/destination.svg"></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select Place</option>
-                                        <option value="1">Villa Tulum</option>
+                                    <label for="destination" class="form-label">DESTINATION <img src="assets/img/destination.svg"></label>
+                                    <select class="form-select" id="destination" name="destination" aria-label="Default select example">
+                                        <option >Select Place</option>
+                                        <option value="1" selected>Villa Tulum</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="" class="form-label">GUESTS <img src="assets/img/guest.svg"></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select Guest</option>
-                                        <option value="12">12</option>>
+                                    <label for="guests" class="form-label">GUESTS <img src="assets/img/guest.svg"></label>
+                                    <select class="form-select" id="guests" name="guests" aria-label="Default select example">
+                                        <option >Select Guest</option>
+                                        <option value="12" selected>12</option>
                                     </select>
-                                </div>
+                                </div>   
                                 <div>
-                                    <button class="btn btn_plan_your" href="places">PLAN YOUR TRIP</button>
-                                </div>
+                                    <button type="submit" class="btn btn_plan_your">PLAN YOUR TRIP</button>
+                                </div>                         
                             </form>
                         </div>
                     </div>
