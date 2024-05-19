@@ -69,12 +69,36 @@ include 'dashboard/class/user.php';
             <div class="row mb-5">
               <div class="col-lg-7"></div>
               <div class="col-lg-5">
-                <div class="card_compras">
-                  <div class="d_flex_price">
-                    <div>$350 <span>/ night</span></div>
-                    <div><img src="assets/img//pay/star.png"></div>
+                <form action="rama" method="get">
+                  <div class="card_compras">
+                    <div class="d_flex_price">
+                      <div class="price_ni">$350 <span>/ night</span></div>
+                      <input type="hidden" value="350" name="amout">
+                      <div class="star_hotel"><img src="assets/img/pay/star.png"></div>
+                    </div>
+                    <div class="times_check">
+                      <div class="flex_in_out">
+                        <div class="check_in_div">
+                          <p>CHECK-IN</p>
+                          <span>09/05/2024</span>
+                          <input type="hidden" value="09-05-2024" name="check-in">
+                        </div>
+                        <div class="check_out_div">
+                          <p>CHECK-OUT</p>
+                          <span>10/05/2024</span>
+                          <input type="hidden" value="10-05-2024" name="check-out">
+                        </div>
+                      </div>
+                      <div class="flex_guest">
+                        <div><p>GUESTS</p></div>
+                        <div><span>5 GUESTS</span></div>
+                      </div>
+                    </div>
+                    <div class="button_book_now">
+                      <button class="">BOOK NOW</button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
  
@@ -86,9 +110,83 @@ include 'dashboard/class/user.php';
         box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.2);
         height: 420px;
         border-radius: 15px;
+        background-color: #ffffff;
+        padding: 20px;
       }
       .card_compras .d_flex_price{
         display: flex;
+        align-items: center;
+        margin: 0px 0px 30px 0px;
+      }
+      .card_compras .d_flex_price .price_ni{
+        font-family: 'Gotham';
+        font-size: 36px;
+        width: 50%;
+      }
+      .card_compras .d_flex_price .price_ni span{
+        font-size: 20px;
+      }
+      .card_compras .d_flex_price .star_hotel{
+        text-align: end;
+         width: 50%;
+      }
+      .card_compras .times_check{
+        
+       border: 1px solid #000000;
+       border-radius: 15px;
+      }
+      .card_compras .times_check .flex_in_out{
+        display: flex;
+      }
+      .card_compras .times_check .flex_in_out p{
+        font-family: 'Gotham Bold';
+        font-size: 15px;
+      }
+      .card_compras .times_check .flex_in_out span{
+        font-family: 'Gotham';
+        font-size: 15px;
+      }
+      .card_compras .times_check .flex_in_out .check_in_div{
+        padding: 20px 20px;
+        width: 50%;
+        border-right: 1px solid #000000;
+      }
+      .card_compras .times_check .flex_in_out .check_out_div{
+        padding: 20px 20px;
+        width: 50%;
+      }
+      .card_compras .times_check .flex_guest{
+        display: flex;
+        align-items: center;
+        padding: 30px 20px;
+        border-top: 1px solid #000000;
+      }
+      .card_compras .times_check .flex_guest p{
+                font-family: 'Gotham Bold';
+        font-size: 15px;
+        margin: 0px;
+      }
+      .card_compras .times_check .flex_guest span{
+                font-family: 'Gotham';
+        font-size: 15px;
+      }
+      .card_compras .times_check .flex_guest div{
+        width: 50%;
+      }
+      .button_book_now{
+        margin: 30px 0px 0px;
+      }
+      .button_book_now button{
+        border: none;
+        width: 100%;
+        font-family: 'Gotham Bold';
+        padding: 18px;
+
+        text-align: center;
+        border-radius: 15px;
+        background-color: #000000;        
+        font-size: 16px;
+        color: #ffffff;
       }
     </style>
  
