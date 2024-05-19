@@ -3,9 +3,28 @@
 include 'dashboard/config/conexion.php';
 include 'dashboard/class/folder.php';
 include 'dashboard/class/user.php';
+include 'dashboard/class/booking.php';
 
 $homeObj = Folder::getFolderHome();
 
+// Obtener las fechas reservadas
+$query = "SELECT date_start, date_end FROM tbl_booking";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$reserved_dates = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Convertir las fechas reservadas a un formato legible por JavaScript
+$dates = [];
+foreach ($reserved_dates as $date) {
+    $start = new DateTime($date['date_start']);
+    $end = new DateTime($date['date_end']);
+    $interval = new DateInterval('P1D');
+    $daterange = new DatePeriod($start, $interval, $end->modify('+1 day'));
+    foreach ($daterange as $date) {
+        $dates[] = $date->format('Y-m-d');
+    }
+}
+$reserved_dates_js = json_encode($dates);
 
 ?>
 
@@ -25,30 +44,17 @@ $homeObj = Folder::getFolderHome();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/gotham-serif-bold?styles=140064" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
 
-    <script>
-        function updateCheckoutDate() {
-            const checkinInput = document.getElementById('checkin');
-            const checkoutInput = document.getElementById('checkout');
 
-            // Establecer la fecha mínima para el checkin (hoy)
-            const today = new Date().toISOString().split('T')[0];
-            checkinInput.min = today;
-
-            checkinInput.addEventListener('change', function() {
-                const checkinDate = new Date(this.value);
-                checkinDate.setDate(checkinDate.getDate() + 1);
-                const nextDay = checkinDate.toISOString().split('T')[0];
-                checkoutInput.value = nextDay;
-                checkoutInput.min = nextDay;  // Establecer la fecha mínima en el campo "CHECK OUT"
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', updateCheckoutDate);
-    </script>                        
 </head>
 <style>
-
+    .flatpickr-disabled {
+        /* opacity: 0.5; */
+        color: rgba(57, 57, 57, 0.3) !important;
+    }
 </style>
 
 <body>
@@ -105,40 +111,38 @@ $homeObj = Folder::getFolderHome();
                         </div>
                         <div class="offcanvas-body px-5">
                             <h3>WELCOME TO ESENCIA</h3>
-
                             <p>Enjoy your stay at <br> Esencia Tulum</p>
-
-
-                           <form class="mt-5" method="POST" action="places.php">
+                            <form class="mt-5" id="availability-space" method="POST" enctype="multipart/form-data">
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
                                         <label for="checkin">CHECK IN*</label>
-                                        <input type="date" class="form-control" id="checkin" name="checkin">
+                                        <input type="text" id="fecha1" name="fecha1" placeholder="Seleccionar">
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
                                         <label for="checkout">CHECK OUT*</label>
-                                        <input type="date" class="form-control" id="checkout" name="checkout">
+                                        <input type="text" id="fecha2" name="fecha2" placeholder="dd/mm/yyyy" disabled>
                                     </div>
-                                </div>                                                          
+                                </div>
+
                                 <div class="mb-3 mt-4">
                                     <label for="destination" class="form-label">DESTINATION <img src="assets/img/destination.svg"></label>
                                     <select class="form-select" id="destination" name="destination" aria-label="Default select example">
-                                        <option >Select Place</option>
+                                        <option>Select Place</option>
                                         <option value="1" selected>Villa Tulum</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="guests" class="form-label">GUESTS <img src="assets/img/guest.svg"></label>
                                     <select class="form-select" id="guests" name="guests" aria-label="Default select example">
-                                        <option >Select Guest</option>
+                                        <option>Select Guest</option>
                                         <option value="12" selected>12</option>
                                     </select>
-                                </div>   
+                                </div>
                                 <div>
                                     <button type="submit" class="btn btn_plan_your">PLAN YOUR TRIP</button>
-                                </div>                         
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -223,6 +227,15 @@ $homeObj = Folder::getFolderHome();
         </div>
     </section>
     <?php include 'app/footer.php'; ?>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- SWEETALERT CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.js"></script>
+
+
+
+    <script src="dashboard/assets/js/booking/availability-space.js"></script>
+
 
     <div class="whatstapp-link">
         <a href="">
@@ -236,6 +249,89 @@ $homeObj = Folder::getFolderHome();
         </a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Incluir scripts de Flatpickr y tu código JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        // Inicializar el primer Flatpickr
+        flatpickr("#fecha1", {
+            disable: <?php echo $reserved_dates_js; ?>,
+            minDate: "today",
+            onChange: function(selectedDates, dateStr, instance) {
+                if (selectedDates.length > 0) {
+                    // Obtener la fecha seleccionada y sumarle un día
+                    let checkInDate = new Date(selectedDates[0]);
+                    let checkOutDate = new Date(checkInDate);
+                    checkOutDate.setDate(checkOutDate.getDate() + 1);
+
+                    // Formatear la fecha a "dd/mm/yyyy"
+                    let formattedDate = checkOutDate.toLocaleDateString('en-GB').split('/').reverse().join('-');
+
+                    // Actualizar el segundo Flatpickr
+                    flatpickr("#fecha2", {
+                        defaultDate: formattedDate,
+                        disable: <?php echo $reserved_dates_js; ?>
+                    });
+
+                    // Habilitar el campo de fecha de salida
+                    document.getElementById("fecha2").disabled = false;
+                }
+            }
+        });
+
+        // Inicializar el segundo Flatpickr sin fecha por defecto
+        flatpickr("#fecha2", {
+            disable: <?php echo $reserved_dates_js; ?>
+        });
+    </script>
 </body>
 
 </html>
+<!-- <script>
+    $(function() {
+        const reservedDates = <?= $reserved_dates_js ?>;
+
+        function disableDates(date) {
+            const currentDate = new Date();
+            currentDate.setHours(0, 0, 0, 0); // Establecer la hora a las 00:00:00 para comparar solo fechas
+            const dateString = $.datepicker.formatDate('yy-mm-dd', date);
+            return [date < currentDate || reservedDates.indexOf(dateString) === -1];
+        }
+
+        $("#checkin").datepicker({
+            dateFormat: 'yy-mm-dd',
+            beforeShowDay: disableDates,
+            minDate: 0, // Solo permite seleccionar a partir de hoy
+            onSelect: function(selectedDate) {
+                const date = $(this).datepicker('getDate');
+                const nextDay = new Date(date.setDate(date.getDate()));
+                $('#checkout').datepicker('option', 'minDate', nextDay);
+
+                const checkoutDate = new Date(date); // Clonar la fecha seleccionada
+                checkoutDate.setDate(checkoutDate.getDate() + 1); // Sumar 2 días
+                $('#checkout').datepicker('setDate', checkoutDate); // Establecer la fecha de check-out
+
+                // Actualizar el valor del campo de "CHECK OUT"
+                $('#checkout').val($.datepicker.formatDate('yy-mm-dd', checkoutDate));
+            }
+        });
+
+        $("#checkout").datepicker({
+            dateFormat: 'yy-mm-dd',
+            beforeShowDay: disableDates,
+            minDate: 2 // Deshabilitar fechas anteriores a 2 días después de la fecha actual
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const checkinInput = document.getElementById("checkin");
+        const today = new Date().toISOString().split('T')[0];
+        checkinInput.value = today;
+
+        // Establecer la fecha de "CHECK OUT" 2 días después de la fecha actual
+        const checkoutInput = document.getElementById("checkout");
+        const checkoutDate = new Date(today);
+        checkoutDate.setDate(checkoutDate.getDate() + 1); // Sumar 2 días
+        checkoutInput.value = checkoutDate.toISOString().split('T')[0];
+    });
+</script> -->

@@ -2,6 +2,7 @@
 include 'config/conexion.php';
 include 'class/user.php';
 include 'class/folder.php';
+include 'class/booking.php';
 include 'core/Security.php';
 session_start();
 if (!isset($_SESSION["user"])) {
@@ -29,7 +30,6 @@ $userObj = User::getAdminId($usuario_id);
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="assets/css/dashboard.css" />
   <link rel="stylesheet" href="assets/css/media.css" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
