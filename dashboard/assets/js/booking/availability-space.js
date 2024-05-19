@@ -11,18 +11,20 @@ $(document).ready(function () {
             data: formData5,
             processData: false,
             contentType: false,
-            dataType: "json", // Especifica que esperas una respuesta JSON
+            dataType: "json",
             beforeSend: function () {
-                // Muestra el overlay de carga antes de enviar la solicitud
                 $("#loading-overlay").css("display", "flex");
             },
             success: function (response) {
-                // Oculta el overlay de carga después de procesar la respuesta
                 $("#loading-overlay").css("display", "none");
 
-                // Maneja la respuesta del servidor
                 if (response.status === "success") {
-                    // Muestra la alerta de éxito
+                    // Guardar datos en localStorage
+                    localStorage.setItem('fecha1', $('#fecha1').val());
+                    localStorage.setItem('fecha2', $('#fecha2').val());
+                    // localStorage.setItem('destination', $('#destination').val());
+                    // localStorage.setItem('guests', $('#guests').val());
+
                     Swal.fire({
                         icon: "success",
                         title: "Dates available",
@@ -34,7 +36,6 @@ $(document).ready(function () {
                         }
                     });
                 } else {
-                    // Muestra la alerta de error
                     Swal.fire({
                         icon: "error",
                         title: "Error",
@@ -44,11 +45,8 @@ $(document).ready(function () {
                 }
             },
             error: function (xhr, status, error) {
-                // Oculta el overlay de carga en caso de error
                 $("#loading-overlay").css("display", "none");
                 console.error(xhr.responseText);
-
-                // Muestra la alerta de error genérico
                 Swal.fire({
                     icon: "error",
                     title: "Request failed",
