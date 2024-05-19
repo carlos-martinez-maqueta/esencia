@@ -178,3 +178,22 @@ $spaceObj = Folder::getFolderSpace();
 </body>
 
 </html>
+
+<!-- RECUPERAR DATOS DE LOCALSTORAGE -->
+<script>
+  $(document).ready(function() {
+    // Recuperar datos de localStorage y llenar los campos del formulario
+    if (localStorage.getItem('fecha1')) {
+      $('#fecha1').val(localStorage.getItem('fecha1'));
+    }
+    if (localStorage.getItem('fecha2')) {
+      $('#fecha2').val(localStorage.getItem('fecha2'));
+    }
+    // if (localStorage.getItem('destination')) {
+    //   $('#destination').val(localStorage.getItem('destination'));
+    // }
+    // if (localStorage.getItem('guests')) {
+    //   $('#guests').val(localStorage.getItem('guests'));
+    // }
+  });
+</script>
