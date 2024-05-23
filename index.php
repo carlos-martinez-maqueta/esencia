@@ -74,7 +74,7 @@ $reserved_dates_js = json_encode($dates);
                         </div>
                         <div class="offcanvas-body">
                             <ul>
-                                <li><a href="">HOME</a></li>
+                                <li><a href="index">HOME</a></li>
                                 <li><a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BOOK NOW</a></li>
                                 <li><a href="about">ABOUT US</a></li>
                                 <li><a href="events">SERVICES</a></li>
@@ -82,8 +82,8 @@ $reserved_dates_js = json_encode($dates);
                         </div>
                         <div class="offcanvas-bottom">
                             <ul>
-                                <li><a href="login">SIGN IN</a></li>
-                                <li><a href="register">SIGN UP</a></li>
+                                <li><a href="sign-in">SIGN IN</a></li>
+                                <li><a href="sign-up">SIGN UP</a></li>
                             </ul>
                             <div class="d-flex lenguaje">
                                 <div class=""><a class="me-3" href="index">EN </a></div>
@@ -116,7 +116,7 @@ $reserved_dates_js = json_encode($dates);
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
                                         <label for="checkin">CHECK IN*</label>
-                                        <input type="text" id="fecha1" name="fecha1" placeholder="Seleccionar">
+                                        <input type="text" id="fecha1" name="fecha1" placeholder="dd/mm/yyyy">
                                     </div>
                                 </div>
                                 <div class="dates_input">
