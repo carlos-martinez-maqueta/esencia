@@ -1,0 +1,49 @@
+.location_hotel p{ 
+    font-size: 20px;
+}
+.p_info_text p{
+    font-family: 'Gotham';
+    font-size: 15px;
+}
+.aas{
+    height: 50%;
+}
+.aas img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.house_rules h4{
+    font-family: 'Gotham Bold';
+    font-size: 20px;
+}
+.house_rules p{
+    font-family: 'Gotham';
+    font-size: 15px;
+    margin: 0px;
+}
+.house_rules .cuadro_rules{
+    border: 2px solid #D9D9D9;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0px 0px 0px;
+}
+.house_rules .cuadro_rules .item_rules{
+    display: flex;  
+    border-bottom: 2px solid #D9D9D9; 
+    padding: 20px 0px 20px 0px;
+}
+.house_rules .cuadro_rules .item_rules .title_rules{
+    width: 30%;
+}
+.house_rules .cuadro_rules .item_rules .title_rules p{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.house_rules .cuadro_rules .item_rules .descrip_rules{
+    width: 70%;
+}
+.house_rules .cuadro_rules .item_rules .descrip_rules p{
+    font-size: 11px;
+}
