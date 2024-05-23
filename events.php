@@ -30,7 +30,7 @@ $servicesFolderObj = Folder::getFolderService();
   <?php include 'app/header-all.php'; ?>
 
   <main>
-    <section class="section_events">
+    <section class="section_events mb-5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-12 col_hormiga ">

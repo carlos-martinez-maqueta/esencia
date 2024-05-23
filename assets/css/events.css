@@ -15,6 +15,7 @@
   font-family: 'Gotham Bold';
 }
 .section_events .service .info_service p{
+  text-transform: uppercase;
   font-size: 30px;
   font-family: 'Gotham Bold';
   color: #000000;

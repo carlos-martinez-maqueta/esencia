@@ -148,7 +148,9 @@ $reserved_dates_js = json_encode($dates);
                     </div>
                 </div>
             </div>
-            <img src="dashboard/files/home/<?= $homeObj->banner ?>" class="img_banner" alt="">
+            <video src="assets/video/home.mp4" autoplay muted loop class="img_banner"></video>
+
+            <!-- <img src="dashboard/files/home/<?//= $homeObj->banner ?>" class="img_banner" alt=""> -->
         </div>
     </section>
     <section class="section_about">
@@ -162,9 +164,9 @@ $reserved_dates_js = json_encode($dates);
                 <div class="col-lg-5 position-relative">
                     <div class="card_about">
                         <h3 class="mb-4">ABOUT OUR HOTEL</h3>
-                        <p class="mb-5"><?= $homeObj->short_text_about ?></p>
+                         <?= $homeObj->short_text_about ?> 
 
-                        <a href="" class="read_more">READ MORE <!-- <img src="assets/img/izquierda.svg" class="ms-3"> --></a>
+                        <a href="about" class="read_more mt-5">READ MORE <!-- <img src="assets/img/izquierda.svg" class="ms-3"> --></a>
                     </div>
                 </div>
             </div>
@@ -194,8 +196,8 @@ $reserved_dates_js = json_encode($dates);
                 </div>
                 <div class="col-lg-6  fondo_boletin_form">
                     <div class="px-lg-5 px-3">
-                        <h3 class="mb-3">Stay UPDATED</h3>
-                        <p class="mb-5">SUBSCRIBE TO OUR NEWLESTTER</p>
+                        <h3 class="mb-3">Stay Updated!</h3>
+                        <p class="mb-5">SUBSCRIBE TO OUR NEWSLETTER</p>
 
                         <form>
                             <div class="row">
@@ -218,7 +220,7 @@ $reserved_dates_js = json_encode($dates);
                                     </div>
                                 </div>
                             </div>
-                            <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                            <p class="my-4">Be the first to know about exclusive offers, new villa listings, and special events. <br> Join our community of luxury travelers and receive updates directly to your inbox.</p>
                             <button class="btn_boletin">SUBMIT</button>
                         </form>
                     </div>

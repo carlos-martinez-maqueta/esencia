@@ -13,6 +13,7 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 999;
     background-color: #00000070;
 }
 .section_banner .cont_banner .fondo_banner .menu_banner{
@@ -200,8 +201,8 @@ border: 0px;
     /*font-style: italic;*/
     font-size: 36px;
 }
-.section_about .card_about a{
-
+.section_about .card_about p{
+    margin-bottom: 30px !important;
 }
 .section_about .card_about .read_more{
     font-family: 'Gotham'; 
