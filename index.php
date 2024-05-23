@@ -116,13 +116,13 @@ $reserved_dates_js = json_encode($dates);
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
                                         <label for="checkin">CHECK IN*</label>
-                                        <input type="text" id="fecha1" name="fecha1" placeholder="dd/mm/yyyy">
+                                        <input type="text" id="fecha1" name="fecha1" placeholder="dd/mm/yyyy" required>
                                     </div>
                                 </div>
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
                                         <label for="checkout">CHECK OUT*</label>
-                                        <input type="text" id="fecha2" name="fecha2" placeholder="dd/mm/yyyy" disabled>
+                                        <input type="text" id="fecha2" name="fecha2" placeholder="dd/mm/yyyy" disabled required>
                                     </div>
                                 </div>
 

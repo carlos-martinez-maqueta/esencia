@@ -48,7 +48,7 @@ $spaceObj = Folder::getFolderSpace();
   .section_places .col_hormiga h2 {
     font-family: 'FreightDisp Medium';
     font-style: italic;
-    font-size: 64px;
+    font-size: 50px;
   }
 
   .section_places .tags_places ul {
@@ -76,7 +76,7 @@ $spaceObj = Folder::getFolderSpace();
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col_hormiga ">
-            <div class="ali mb-4"><img src="assets/img/hormiga.svg"> <a href="index.php"><b>HOME</b></a></div>
+            <div class="ali mb-4"><img src="assets/img/hormiga.svg"> <a href="index"><b>HOME</b></a></div>
 
             <span>OUR RECOMMENDED</span>
 
@@ -95,11 +95,13 @@ $spaceObj = Folder::getFolderSpace();
         </div>
 
         <div class="row py-5">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <?php foreach ($spaceObj as $result) : ?>
               <div class="card_place">
-                <a href="detalle-place.php"><img src="dashboard/files/space/<?= $result->main_image; ?>" class="img-fluid w-100"></a>
-                <div class="row align-items-center pt-3">
+                <a href="detalle-place.php">
+                  <img src="dashboard/files/space/<?= $result->main_image; ?>" class="img-fluid w-100 img_place_banner">
+                </a>
+                <div class="row align-items-center py-3">
                   <div class="col-6 name_place">
                     <p><?= $result->name; ?></p>
                   </div>
@@ -120,9 +122,9 @@ $spaceObj = Folder::getFolderSpace();
             <?php endforeach; ?>
 
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-8">
             <div class="div_mapa_places">
-              <img src="assets/img/map-places.png" class="img-fluid">
+              <img src="assets/img/map-places.png" class="img-fluid w-100">
             </div>
           </div>
         </div>
@@ -131,9 +133,13 @@ $spaceObj = Folder::getFolderSpace();
   </main>
 
   <style type="text/css">
-    .section_places .card_place .name_place {
+    .img_place_banner{
+      border-radius: 15px;
+    }
+    .section_places .card_place .name_place p{
       font-family: 'Gotham';
-      font-size: 32px;
+      font-size: 28px;
+      margin: 0px; 
     }
 
     .section_places .card_place .review_star {
@@ -148,6 +154,9 @@ $spaceObj = Folder::getFolderSpace();
 
     .section_places .card_place .ubicacion_personas ul li {
       margin-right: 15px;
+    }
+    .section_places .card_place .ubicacion_personas ul li img{
+      width: 30px;
     }
 
     .section_places .card_place .ubicacion_personas ul li a {
