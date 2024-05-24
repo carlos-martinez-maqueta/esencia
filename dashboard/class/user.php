@@ -19,4 +19,6 @@ class User {
         $result = $statement->fetch(PDO::FETCH_OBJ);
         return $result;
     }
+    
+
 }

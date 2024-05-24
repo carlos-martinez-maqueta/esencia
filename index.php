@@ -82,8 +82,8 @@ $reserved_dates_js = json_encode($dates);
                         </div>
                         <div class="offcanvas-bottom">
                             <ul>
-                                <li><a href="login">SIGN IN</a></li>
-                                <li><a href="register">SIGN UP</a></li>
+                                <li><a href="sign-in">SIGN IN</a></li>
+                                <li><a href="sign-un">SIGN UP</a></li>
                             </ul>
                             <div class="d-flex lenguaje">
                                 <div class=""><a class="me-3" href="index">EN </a></div>
