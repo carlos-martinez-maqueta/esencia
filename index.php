@@ -5,6 +5,9 @@ include 'dashboard/class/folder.php';
 include 'dashboard/class/user.php';
 include 'dashboard/class/booking.php';
 
+session_start();
+
+
 $homeObj = Folder::getFolderHome();
 
 // Obtener las fechas reservadas
@@ -45,7 +48,7 @@ $reserved_dates_js = json_encode($dates);
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/gotham-serif-bold?styles=140064" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
 
 
@@ -82,8 +85,20 @@ $reserved_dates_js = json_encode($dates);
                         </div>
                         <div class="offcanvas-bottom">
                             <ul>
-                                <li><a href="sign-in">SIGN IN</a></li>
-                                <li><a href="sign-un">SIGN UP</a></li>
+                                <?php
+                                // Verificar si $_SESSION['user'] está definida antes de intentar acceder a ella
+                                if (isset($_SESSION['user'])) {
+                                    $client_id = $_SESSION['user_id'];
+                                    $clientObj = User::getClientId($client_id);
+                                    // Si hay una sesión activa, mostrar el nombre del usuario
+                                    echo '<li class="text-light"><i class="bx bxs-user me-1"></i>' . $clientObj->name . ' ' . $clientObj->lastname . '</li>';
+                                    echo '<li class="text-light"><a href="logout">Logout</a></li>'; // Enlace para cerrar sesión
+                                } else {
+                                    // Si no hay sesión activa, mostrar los botones de inicio de sesión y registro
+                                    echo '<li><a href="sign-in">SIGN IN</a></li>';
+                                    echo '<li><a href="sign-up">SIGN UP</a></li>';
+                                }
+                                ?>
                             </ul>
                             <div class="d-flex lenguaje">
                                 <div class=""><a class="me-3" href="index">EN </a></div>

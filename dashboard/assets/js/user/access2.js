@@ -18,7 +18,7 @@ $(document).ready(function () {
         var formData = new FormData(this); // Obtener los datos del formulario
 
         $.ajax({
-            url: 'dashboard/config/user/verify-user.php',
+            url: 'dashboard/config/user/verify-client.php',
             type: 'POST',
             data: formData,
             processData: false,
@@ -32,7 +32,7 @@ $(document).ready(function () {
                         text: response.message
                     }).then(function(result) {
                         if (result.isConfirmed) {
-                            window.location.href = './';
+                            window.location.href = 'index';
                         }
                     });
                 } else {

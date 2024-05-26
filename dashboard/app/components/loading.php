@@ -18,8 +18,8 @@
     }
 </style>
 
-<div id="loading-overlay" class="loading-overlay d-none">
-    <div class="spinner-border text-warning" role="status">
+<div id="loading-overlay" class="loading-overlay">
+    <div class="spinner-border text-dark" role="status">
         <span class="visually-hidden">Loading...</span>
     </div>
 </div>
