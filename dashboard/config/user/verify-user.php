@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($userObj) {
         // Usuario encontrado, iniciar sesión
-        $_SESSION['user']  = $userObj; 
+        $_SESSION['user_admin']  = $userObj; 
         $_SESSION['user_id'] = $userObj->id; 
 
         $response = array(

@@ -168,7 +168,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:40px 50px 30px;font-family:'Raleway',sans-serif;" align="left">
         
   <div class="v-text-align" style="font-size: 14px; line-height: 140%; text-align: justify; word-wrap: break-word;">
-    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22.4px;"><strong>Welcome Stephen!</strong></span></p>
+    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22.4px;"><strong>Welcome #name#!</strong></span></p>
 <p style="line-height: 140%; font-size: 14px;"> </p>
 <p style="line-height: 140%; font-size: 14px;">Thank you for registering with us. Here are the details of your registration:</p>
 <p style="line-height: 140%; font-size: 14px;"> </p>

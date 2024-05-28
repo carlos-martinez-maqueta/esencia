@@ -28,6 +28,21 @@ class User {
         $result = $statement->fetch(PDO::FETCH_OBJ);
         return $result;
     }
+    public static function getClientAll()
+    {
+        // Es una variable que esta en otro archivos
+        global $conn;
+        $statement = $conn->prepare("
+        SELECT 
+            *
+        FROM 
+        tbl_client
+        
+            ");
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
     public static function getAdminId($id)
     {
         global $conn;

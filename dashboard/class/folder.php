@@ -170,7 +170,7 @@ class Folder
         $stmt->execute();
         return $stmt;
     }
-    
+
     public static function getEditTimelineId($tomelineId)
     {
         global $conn;
@@ -277,16 +277,16 @@ class Folder
         $sql = "INSERT INTO tbl_space (name, location, maximum_people, price, coordinate, state) 
                 VALUES (:name, :location, :maximum_people, :price, :coordinates, :state)";
         $stmt = $conn->prepare($sql);
-    
+
         $state = 'active';  // Define una variable para el estado
-    
+
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':location', $location);
         $stmt->bindParam(':maximum_people', $maximum_people);
         $stmt->bindParam(':price', $price);
         $stmt->bindParam(':coordinates', $coordinates);
         $stmt->bindValue(':state', $state);  // Usa la variable en lugar del valor literal
-    
+
         return $stmt;
     }
     public static function editBannerSpaceMain($id, $banner)
@@ -322,5 +322,53 @@ class Folder
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_OBJ);
         return $result;
+    }
+    public static function addLabels($name, $icons)
+    {
+        global $conn;
+        $sql = "INSERT INTO tbl_labels (name, icons) 
+                VALUES (:name, :icons)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':icons', $icons);
+        return $stmt;
+    }
+    public static function getLabelsSpaceId($id)
+    {
+        global $conn;
+        $statement = $conn->prepare("SELECT * FROM tbl_labels_spaces WHERE space_id = :id");
+        $statement->bindValue(":id", $id);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+    // GALERY SPACE
+    public static function addImage($space_id, $image)
+    {
+        global $conn;
+        $sql = "INSERT INTO tbl_banners_space (space_id, imagen) 
+                VALUES (:space_id, :imagen)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':space_id', $space_id);
+        $stmt->bindParam(':imagen', $image);
+        return $stmt;
+    }
+    public static function getImageSpaceId($id)
+    {
+        global $conn;
+        $statement = $conn->prepare("SELECT * FROM tbl_banners_space WHERE space_id = :id");
+        $statement->bindValue(":id", $id);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+    public static function deleteImage($id) {
+        global $conn;
+    
+        $sql = "DELETE FROM tbl_banners_space WHERE id = :id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        // Ejecutar la consulta preparada y devolver el resultado
+        return $stmt->execute();
     }
 }

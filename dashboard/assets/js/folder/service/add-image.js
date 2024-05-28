@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    var form = $("#edit-labels-space");
+    var form = $("#add-image");
 
     form.submit(function (e) {
         e.preventDefault();
 
         var formData5 = new FormData(this);
         $.ajax({
-            url: "config/folder/edit-details-space.php",
+            url: "config/folder/add-banner.php",
             method: "POST",
             data: formData5,
             processData: false,
@@ -25,11 +25,12 @@ $(document).ready(function () {
                     // Muestra la alerta de éxito
                     Swal.fire({
                         icon: "success",
-                        title: "Edited successfully.",
+                        title: "Created successfully.",
                         text: response.message,
                         confirmButtonText: "OK",
                     }).then((result) => {
                         if (result.isConfirmed) {
+                            $("#exampleModal").modal("hide");
                             window.location.reload();
                         }
                     });
@@ -51,3 +52,4 @@ $(document).ready(function () {
         });
     });
 });
+

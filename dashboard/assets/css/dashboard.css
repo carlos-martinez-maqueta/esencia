@@ -17,6 +17,10 @@ a{
 
   font-family: "Montserrat", sans-serif;
 }
+.swal2-popup {
+  text-align: center !important; /* Alinea el texto al centro */
+  /* Agrega otros estilos personalizados según sea necesario */
+}
 .border-left-primary {
   border-left: .25rem solid #000 !important;
 }

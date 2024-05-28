@@ -24,11 +24,37 @@
             </div>
         </div>
     </div>
+    <div class="sidebar-heading text-white font_one">
+        <p class="small mb-0">Gestion of reservs</p>
+    </div>
+
+    <div class="list-group list-group-flush">
+        <a href="calendar" class="list-group-item list-group-item-action bg-transparent text-color-sidebar active small"><i class='bx bx-calendar-week me-2'></i> Calendar</a>
+    </div>
+    <div class="list-group list-group-flush">
+        <a href="bookings" class="list-group-item list-group-item-action bg-transparent text-color-sidebar active small"><i class='bx bx-book me-2'></i> Bookings</a>
+    </div>
+
+    <div class="sidebar-heading text-white font_one">
+        <p class="small mb-0">Income</p>
+    </div>
+
+    <div class="list-group list-group-flush">
+        <a href="payments" class="list-group-item list-group-item-action bg-transparent text-color-sidebar active small"><i class='bx bxs-shopping-bags me-2'></i> Payments</a>
+    </div>
+
+    <div class="sidebar-heading text-white font_one">
+        <p class="small mb-0">Community</p>
+    </div>
+
+    <div class="list-group list-group-flush">
+        <a href="clients" class="list-group-item list-group-item-action bg-transparent text-color-sidebar active small"><i class='bx bx-group me-2'></i>Clients</a>
+    </div>
 
     <div class="sidebar-heading text-white font_one">
         <p class="small mb-0">Marketing</p>
     </div>
-    
+
     <div class="list-group list-group-flush">
         <a href="management-social-networks" class="list-group-item list-group-item-action bg-transparent text-color-sidebar active small"><i class='bx bx-trending-up me-2'></i>Social Networks</a>
     </div>

@@ -1,11 +1,26 @@
-<?php include 'app/components/header.php';
-
+<?php
+include 'app/components/header.php';
 
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
     $spaceObj = Folder::getFolderSpaceId($id);
 
     $labelObj = Folder::getLabels();
+    $labelsSpace = Folder::getLabelsSpaceId($id);
+    $bannersSpace = Folder::getImageSpaceId($id);
+
+    // Inicializar un array para almacenar los IDs de las etiquetas
+    $labels_id = array();
+    // Iterar sobre los resultados para obtener los IDs de las etiquetas
+    foreach ($labelsSpace as $labelSpace) {
+        $labels_id[] = $labelSpace->labels_id;
+    }
+
+    // Si necesitas obtener los IDs de las etiquetas directamente como un array, también puedes hacerlo así:
+    // $labels_id = array_column($labelsSpace, 'labels_id');
+
+    // Corregir la clave utilizada para seleccionar las etiquetas en el array de resultados
+    $selectedLabels = array_column($labelsSpace, 'labels_id');
 } else {
     session_start();
     session_destroy();
@@ -31,6 +46,68 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     .nav-pills .show>.nav-link {
         background-color: #000 !important;
         color: #fff;
+    }
+
+    .fixed-image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .fixed-image-container:hover .delete-button {
+        opacity: 1;
+    }
+
+    .image {
+        overflow: hidden;
+        height: 300px;
+        width: 300px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 15px;
+        box-shadow: 0 0 25px 1px rgba(0, 0, 0, .3);
+        transition: .5s;
+        background-color: #555
+    }
+
+    .image:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        height: 500px;
+        transform: translate(-140%, -50%);
+        background-color: rgba(255, 255, 255, 0.5);
+        opacity: 0.8;
+        border-radius: 50%;
+        transition: .8s
+    }
+
+    .image:hover:after {
+        transform: translate(-50%, -50%)
+    }
+
+    .image:hover img {
+        transform: translate(-50%, -50%) scale(1.3) rotate(20deg)
+    }
+
+
+
+    .i_galery {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-2000px, -50%);
+        color: #fff;
+        transition: .8s;
+        transition-timing-function: ease-in
+    }
+
+    .image:hover i {
+        transform: translate(-50%, -50%);
+        transition-timing-function: ease
     }
 </style>
 
@@ -135,20 +212,22 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                                 <div class="col-xl-12">
                                     <div class="col-12 mb-2 d-flex justify-content-between">
                                         <h1 class="h3 mb-xl-0 mb-lg-0 mb-md-3 mb-3 text-gray-800 d-flex align-items-center gap-2 font_two">Select tags</h1>
-                                        <div class="d-flex">
-                                            <a href="#" class="btn-primary btn me-2">Add Labels</a>
-                                            <button type="submit" class="btn btn-warning btn-sm d-flex align-items-center gap-2"><i class='bx bxs-edit fs-5'></i> Edit</button>
+                                        <div class="d-flex gap-1">
+                                            <a href="#" class="btn-primary btn btn-sm d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addLabelModal"><i class='bx bx-folder-plus me-1'></i> Add Label</a>
+                                            <button type="submit" class="btn btn-warning btn-sm d-flex align-items-center"><i class='bx bxs-edit fs-5 me-1'></i> Edit</button>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="space_id" value="1"> <!-- Asegúrate de pasar el ID del espacio correcto -->
+                                    <input type="hidden" name="space_id" value="<?= $id ?>">
                                     <?php foreach ($labelObj as $label) : ?>
+                                        <?php $isChecked = in_array($label->id, $selectedLabels); ?>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="labels[]" value="<?php echo $label->id; ?>" id="label-<?php echo $label->id; ?>">
-                                            <label class="form-check-label" for="label-<?php echo $label->id; ?>">
-                                                <?php echo $label->icons; ?> <?php echo $label->nombre; ?>
+                                            <input class="form-check-input" type="checkbox" name="labels[]" value="<?= $label->id; ?>" id="label-<?= $label->id; ?>" <?= $isChecked ? 'checked' : ''; ?>>
+                                            <label class="form-check-label" for="label-<?= $label->id; ?>">
+                                                <?= $label->icons; ?> <?= $label->name; ?>
                                             </label>
                                         </div>
                                     <?php endforeach; ?>
+
                                 </div>
                             </div>
                         </form>
@@ -156,9 +235,29 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                     <!-- Membresia 3 -->
                     <div class="tab-pane fade col-lg-12 mt-4 px-4" id="v-3" role="tabpanel" aria-labelledby="v-3-tab" tabindex="0">
                         <div class="row">
-
+                            <div class="col-12">
+                                <div class="col-12 mb-2 d-flex justify-content-between">
+                                    <h1 class="h3 mb-xl-0 mb-lg-0 mb-md-3 mb-3 text-gray-800 d-flex align-items-center gap-2 font_two">Gallery management</h1>
+                                    <div class="d-flex gap-1">
+                                        <a href="#" class="btn-primary btn btn-sm d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addImageModal"><i class='bx bx-image-add me-1'></i> Add image</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <?php foreach ($bannersSpace as $result) : ?>
+                                        <div class="col-md-4">
+                                            <div class="image">
+                                                <img src="files/space/<?= $result->imagen; ?>" alt="" style="position: absolute; height: 110%; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: .8s">
+                                                <a href="#" class="delete-image" data-id="<?= $result->id; ?>"> <!-- Agregamos el atributo data-id con el ID de la imagen -->
+                                                    <i class="bx bx-trash fa-3x i_galery"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                     <!-- Membresia 4 -->
                     <!-- <div class="tab-pane fade col-lg-12 mt-4 px-4" id="v-4" role="tabpanel" aria-labelledby="v-4-tab" tabindex="0">
@@ -176,8 +275,71 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
 </div>
 <!-- end content -->
+<!-- Modal Label-->
+<div class="modal fade" id="addLabelModal" tabindex="-1" aria-labelledby="addLabelModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="add-label" method="POST" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addLabelModalLabel">Add Label</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" name="name" placeholder="name@example.com">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" name="font_code" placeholder="name@example.com">
+                            <label for="floatingInput">Font Code</label>
+                            <div id="emailHelp" class="form-text">
+                                Please visit <a href="https://boxicons.com/" class="text-primary" target="_blank">Boxicons</a> to find the icon font code.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary d-flex align-items-center"><i class='bx bx-save me-1'></i> Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Modal Image -->
+<div class="modal fade" id="addImageModal" tabindex="-1" aria-labelledby="addImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="add-image" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="space_id" value="<?= $id ?>">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addImageModalLabel">Add Image</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Select image</label>
+                            <input class="form-control" type="file" id="formFile" name="imagen">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary d-flex align-items-center"><i class='bx bx-save me-1'></i> Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
+<?php include 'app/components/loading.php'; ?>
 <?php include 'app/components/footer.php'; ?>
 <script src="assets/js/imagen-previa.js"></script>
+<script src="assets/js/folder/service/add-label.js"></script>
+<script src="assets/js/folder/service/add-image.js"></script>
+<script src="assets/js/folder/service/delete-image.js"></script>
+<script src="assets/js/folder/space/add-space.js"></script>
 <script src="assets/js/folder/space/edit-space.js"></script>
-<script src="assets/js/folder/space/assign-labels-space.js"></script>
+<script src="assets/js/folder/space/edit-labels-space.js"></script>

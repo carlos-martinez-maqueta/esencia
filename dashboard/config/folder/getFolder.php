@@ -55,3 +55,29 @@ if (isset($_POST['action']) && $_POST['action'] == 'delete_equipment_id') {
     // Devolver la respuesta como JSON
     echo json_encode($response);
 }
+// Verificar si se recibió una solicitud de eliminación de imagen
+if (isset($_POST['action']) && $_POST['action'] == 'delete_image') {
+    // Obtener el ID de la imagen a eliminar
+    $imageId = $_POST['imageId'];
+
+    // Realizar la eliminación de la imagen
+    $result = Folder::deleteImage($imageId); // Llamar a la función para eliminar la imagen
+
+    // Verificar si la eliminación fue exitosa
+    if ($result) {
+        // Si la eliminación fue exitosa, enviar una respuesta JSON con estado 'success'
+        $response = array(
+            'status' => 'success',
+            'message' => 'Image removed successfully.'
+        );
+    } else {
+        // Si hubo un error al eliminar la imagen, enviar una respuesta JSON con estado 'error'
+        $response = array(
+            'status' => 'error',
+            'message' => 'Error deleting image.'
+        );
+    }
+
+    // Devolver la respuesta como JSON
+    echo json_encode($response);
+}
