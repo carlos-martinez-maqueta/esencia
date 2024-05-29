@@ -18,9 +18,49 @@ include 'dashboard/class/user.php';
     <script src="index.js" defer></script>
   </head>
   <body>
+
+  <style>
+      .pay .col_hormiga {
+    padding: 30px 0px 0px ;
+    font-size: 12px;
+  }
+
+  .pay .col_hormiga img {
+    width: 20px;
+  }
+
+  .pay .col_hormiga a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Gotham';
+  }
+
+  .pay .col_hormiga a b {
+    font-family: 'Gotham Bold';
+  }
+
+  .pay .col_hormiga span {
+    font-family: 'Gotham Bold';
+    font-size: 20px;
+  }
+
+  .pay .col_hormiga h2 {
+    font-family: 'FreightDisp Medium';
+
+    font-size: 64px;
+  }
+  </style>
     <?php include 'app/header-all.php'; ?>
+    <div class="container pay">
+      <div class="row mt-4">
+        <div class="col-lg-12 col_hormiga ">
+          <div class="ali"><img src="assets/img/hormiga.svg"> <a href="index.php"><b>CANCEL</b></a> </div>
+        </div>
+      </div>
+    </div>
     <!-- Display a payment form -->
-      <div id="checkout" class="mt-5 p-5">
+      <div id="checkout" class="  p-5">
         <!-- Checkout will insert the payment form here -->
       </div>
 
