@@ -1,0 +1,43 @@
+.section_places .col_hormiga {
+    padding: 70px 0px 40px;
+  }
+
+  .section_places .col_hormiga img {
+    width: 20px;
+  }
+
+  .section_places .col_hormiga a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Gotham';
+  }
+
+  .section_places .col_hormiga a b {
+    font-family: 'Gotham Bold';
+  }
+
+  .section_places .col_hormiga span {
+    font-family: 'Gotham Bold';
+    font-size: 20px;
+  }
+
+  .section_places .col_hormiga h2 {
+    font-family: 'FreightDisp Medium';
+    font-style: italic;
+    font-size: 50px;
+  }
+
+  .section_places .tags_places ul {
+    list-style: none;
+    padding: 0px;
+  }
+
+  .section_places .tags_places ul li a {
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #666666;
+    text-decoration: none;
+    padding: 13px 20px;
+    border: 1px solid #929292;
+  }

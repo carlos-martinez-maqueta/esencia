@@ -1,3 +1,14 @@
+<?php
+
+include 'dashboard/config/conexion.php';
+include 'dashboard/class/folder.php';
+include 'dashboard/class/user.php';
+
+$aboutFolderObj = Folder::getFolderAbout();
+$equipmentFolderObj = Folder::getFolderEquipment();
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,8 +18,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <link rel="stylesheet" type="text/css" href="assets/css/header-all.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pay-done.css">
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
   </head>
 
   <style type="text/css">
@@ -19,188 +32,7 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-    .main_pay_done .card_pay{
-      margin: 0px 0px 20px 0px;
-      padding: 20px 30px;
-      background-color: #ffffff;
-      border-radius: 15px;
-    }
-    .main_pay_done .card_pay .booking_confirmed{
-      display: flex;
-    }
-    .main_pay_done .card_pay .booking_confirmed .done_div{
-      width: 50%;
-    }
-    .main_pay_done .card_pay .booking_confirmed .banner_div{
-      text-align: end;
-      width: 50%;
-    }    
-    .main_pay_done .card_pay .booking_confirmed p{
-      margin: 10px 0px 0px 0px;
-      font-size: 22px;
-      font-family: 'Gotham';
-    }
-    .main_pay_done .card_pay .fondo_oscuro{
-      margin: 20px 0px 0px 0px;
-      border-radius: 15px;
-      padding: 20px;
-      background-color: #D9D9D9;
-            font-family: 'Gotham';
-      color: #666666;
-      font-size: 16px;
-    }
-    .main_pay_done .card_pay .fondo_oscuro .flex_items_check{
 
-      margin: 0px 0px 15px 0px;
-      display: flex;
-    }
-    .main_pay_done .card_pay .fondo_oscuro .flex_items_check .item_chec_text{
-      width: 50%;
-    }
-    .main_pay_done .card_pay .fondo_oscuro .flex_items_check .item_chec_date{
-      width: 50%;
-      text-align: end;
-    }
-    .main_pay_done .card_pay .fondo_oscuro .calendar_add ul{
-      display: flex;
-      align-items: center;
-      margin: auto;
-      width: fit-content;
-      list-style: none;
-      padding: 0px;
-    }
-    .main_pay_done .card_pay .fondo_oscuro .calendar_add ul li{
-      width: 84px;
-          margin: 0px 10px;
-    }
-    .main_pay_done .card_pay .fondo_oscuro .calendar_add ul li a{
-      border: 1px solid #6C6868;
-      padding: 5px 20px;
-      border-radius: 50px;
-      width: 100%;
-      display: block;
-      text-align: center;
-    }
-    .main_pay_done .info_pay{
-      border: 3px solid #ffffff;
-      padding: 20px 30px;
-      border-radius: 15px;
-    }
-    .main_pay_done .info_pay .ubicacion_detail{
-      display: flex;
-      align-items: center;
-      background-color: #ffffff;
-      padding: 16px;
-      border-radius: 15px;
-      margin: 0px 0px 20px 0px;
-    }
-    .main_pay_done .info_pay .ubicacion_detail .name_ubis{
-      width: 75%;
-    }
-    .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis{
-      display: flex;
-      justify-content: space-between !important;
-      padding: 0px 10px;
-    }
-    .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis .top_text{
-      padding-top: 20px;
-    }
-    .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis p{
-      font-family: 'Gotham';
-      font-size: 14px;
-      margin: 0px;
-    }
-    .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis span{
-           font-family: 'Gotham Bold';
-      font-size: 16px;
-    }
-    .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis .end_text{
-      width: 50%;
-      text-align: end;
-    }
-    .main_pay_done .info_pay .method_pay{
-      display: flex;
-      align-items: center;
-      margin: 0px 0px 20px 0px;
-      background-color: #ffffff;
-      border-radius: 15px;
-      padding: 20px 20px;
-    }
-    .main_pay_done .info_pay .method_pay div{
-      width: 33%;
-    }
-    .icon_pay a{
-      font-family: 'Gotham';
-      font-size: 12px;
-      text-decoration: none;
-      color: #666666;
-      border: 1px solid #6C6868;
-      border-radius: 50px;
-      padding: 10px 20px;
-    }
-    .name_pay p{
-      font-family: 'Gotham Bold';
-      font-size: 16px;
-      margin: 0px;
-    }
-    .cofirm_pay{
-      font-family: 'Gotham';
-      font-size: 12px;
-      background-color: #000000;
-      color: #ffffff;
-      text-align: center;
-      border-radius: 50px;
-      padding: 10px;
-    }
-    .main_pay_done .info_pay .flex_detail a{
-      font-family: 'Gotham Bold';
-      border-radius: 50px;
-      background-color: #ffffff;
-      color: #000000;
-      font-size: 16px;
-      width: 50%;
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      padding: 14px 0px;
-    }
-    .main_pay_done .point_confirm{
-      display: flex;
-      align-items: center;
-      background-color: #ffffff;
-      width: 190px;
-      padding: 20px;
-      border-radius: 15px;
-    }
-    .main_pay_done .point_confirm span{
-      font-family: 'Gotham Bold';
-      font-size: 14px;
-    }
-    .main_pay_done .point_confirm p{
-      font-family: 'Gotham';
-      font-size: 15px;
-      margin: 0px;
-    }
-    .main_pay_done .text_confirm_p {
-      margin: 150px 0px 0px;
-    }
-    .main_pay_done .text_confirm_p p{
-      font-family: 'Gotham';
-      font-size: 16px;
-      width: 250px;
-      color: #ffffff;
-    }
-    .main_pay_done .lema_confirm{
-      margin: 200px 0px 0px;
-      display: flex;
-      align-items: center;
-    }
-    .main_pay_done .lema_confirm p{
-      font-family: 'FreightDisp Medium';
-      color: #FFFFFF;
-      font-size: 60px;
-      margin: 0px;
-    }
   </style>
   <body style="background-color: #ffffff;">
 
@@ -210,7 +42,7 @@
         <section class="">
           <div class="container">
             <div class="row justify-content-between py-5">
-               <div class="col-lg-6">
+               <div class="col-lg-6 o ">
                  <div class="point_confirm">
                    <div class="mx-2">
                      <img src="assets/img/pay/ubicacion_punto.svg">
@@ -234,7 +66,7 @@
                    </div>
                  </div>
                </div>
-               <div class="col-lg-4">
+               <div class="col-lg-4  ">
                  <div class="card_pay">
                    <div class="booking_confirmed">
                     <div class="done_div">

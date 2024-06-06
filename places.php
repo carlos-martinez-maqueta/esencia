@@ -19,52 +19,12 @@ $spaceObj = Folder::getFolderSpace();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/header-all.css">
   <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/places.css">
   <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 </head>
 <style>
-  .section_places .col_hormiga {
-    padding: 70px 0px 40px;
-  }
 
-  .section_places .col_hormiga img {
-    width: 20px;
-  }
-
-  .section_places .col_hormiga a {
-    text-decoration: none;
-    color: #000000;
-    font-family: 'Gotham';
-  }
-
-  .section_places .col_hormiga a b {
-    font-family: 'Gotham Bold';
-  }
-
-  .section_places .col_hormiga span {
-    font-family: 'Gotham Bold';
-    font-size: 20px;
-  }
-
-  .section_places .col_hormiga h2 {
-    font-family: 'FreightDisp Medium';
-    font-style: italic;
-    font-size: 50px;
-  }
-
-  .section_places .tags_places ul {
-    list-style: none;
-    padding: 0px;
-  }
-
-  .section_places .tags_places ul li a {
-    border-radius: 25px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    color: #666666;
-    text-decoration: none;
-    padding: 13px 20px;
-    border: 1px solid #929292;
-  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -98,7 +58,7 @@ $spaceObj = Folder::getFolderSpace();
           <div class="col-lg-4">
             <?php foreach ($spaceObj as $result) : ?>
               <div class="card_place">
-                <a href="detalle-place.php">
+                <a href="detalle-place">
                   <img src="dashboard/files/space/<?= $result->main_image; ?>" class="img-fluid w-100 img_place_banner">
                 </a>
                 <div class="row align-items-center py-3">

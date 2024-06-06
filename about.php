@@ -105,22 +105,22 @@ $equipmentFolderObj = Folder::getFolderEquipment();
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col_hormiga ">
-            <div class="ali"><img src="assets/img/hormiga.svg"> <a href="index.php"><b>HOME</b></a> / ABOUT</div>
+            <div class="ali"><img src="assets/img/hormiga.svg"> <a href="index"><b>HOME</b></a> / ABOUT</div>
           </div>
         </div>
 
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-5">
           <div class="col-lg-6 sec_about">
             <h5 class="p_lineas"><?= $aboutFolderObj->title ?></h5>
 
             <span><?= $aboutFolderObj->description ?></span>
           </div>
           <div class="col-lg-6">
-            <img src="dashboard/files/about/<?= $aboutFolderObj->banner ?>" class="w-100">
+            <img src="dashboard/files/about/<?= $aboutFolderObj->banner ?>" class="w-100 my-lg-0 my-4">
           </div>
         </div>
 
-        <div class="row mb-5">
+        <!-- <div class="row mb-5">
           <div class="col-lg-12 sec_meet">
             <h5 class="p_lineas">¡MEET OUR TEAM!</h5>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span>
@@ -134,7 +134,7 @@ $equipmentFolderObj = Folder::getFolderEquipment();
               </div>
             </div>
           <?php endforeach; ?>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>

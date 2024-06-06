@@ -27,17 +27,17 @@
 
                                 <ul>
                                     <li><a href="about" class="hov">About Us</a></li>
-                                    <li><a href="#" class="hov">Blog & News</a></li>
+                                    <!-- <li><a href="#" class="hov">Blog & News</a></li> -->
                                     <li><a href="#" class="hov">Work with Us</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
+                        <div class="col-lg-3 col-6 bottom_ul">
                             <div>
                                 <h4>TERMS</h4>
 
                                 <ul>
-                                    <li><a href="#" class="hov">Terms and Conditions</a></li>
+                                    <!-- <li><a href="#" class="hov">Terms and Conditions</a></li> -->
                                     <li><a href="#" class="hov">Terms of Service</a></li>
                                     <li><a href="#" class="hov">Privacy Policies</a></li>
                                     <li><a href="#" class="hov">Cancellation Policies</a></li>
@@ -49,7 +49,6 @@
                                 <h4>CONTACT</h4>
 
                                 <ul>
-                                    <li><a href="#" class="hov">Contact Us</a></li>
                                     <li><a href="#" class="hov">F.A.Q</a></li>
                                     <li><a href="#" class="hov">sales@esencia-house.com</a></li>
                                 </ul>
@@ -70,9 +69,9 @@
                                 <h4>USER</h4>
 
                                 <ul>
-                                    <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="hov">Book Now</a></li>
-                                    <li><a href="sign-in" class="hov">Sign In</a></li>
-                                    <li><a href="sign-up" class="hov">Sign Up</a></li>
+                                    <li><a href="places" class="hov">Book Now</a></li>
+                                    <!-- <li><a href="sign-in" class="hov">Sign In</a></li>
+                                    <li><a href="sign-up" class="hov">Sign Up</a></li> -->
                                     <li>
                                         <ul class="d-flex idiomas_le">
                                             <li class="me-3"><a href="#">EN</a></li>
@@ -84,11 +83,11 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-12">
+                        <div class="col-lg-3 col-6">
                             <div>
                                 <!-- <h4>SOCIAL NETWORKS</h4> -->
 
-                                <ul class="d-flex redes_s">
+                                <ul class="d-lg-flex redes_s">
                                     <li><a href="<?= $socialObj->instagram; ?>"><img class="me-5" src="assets/img/ig.svg"></a></li>
                                     <li><a href="<?= $socialObj->facebook ;?>"><img class="me-5" src="assets/img/fb.svg"></a></li>
                                     <li><a href="<?= $socialObj->linkedin ;?>"><img class="me-5" src="assets/img/lk.svg"></a></li>
@@ -101,11 +100,11 @@
             </div>
 
             <div class="row row_mini_footer">
-                <div class="col-lg-6 col-6">
+                <div class="col-lg-6 col-12">
                     <p>Development by <a href="dintecsolutions.com">DINTEC solutions</a></p>
                 </div>
-                <div class="col-lg-6 col-6 text-lg-end text">
-                    <p>Copyright © 2024 ESENCIA</p>
+                <div class="col-lg-6 col-12 text-lg-end text">
+                    <p>Copyright © 2024 Solistiq</p>
                 </div>
             </div>
         </div>

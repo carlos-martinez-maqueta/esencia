@@ -18,4 +18,99 @@
     width: fit-content;
     display: block;
     }
+    .header_dos .col_lista_header ul li{
+        margin: 0px;
+    }
+    .section_places .col_hormiga {
+        padding: 50px 20px 20px !important;
+    }
+    .section_places .col_hormiga span{
+        font-size: 18px;
+    }
+    .section_places .col_hormiga h2{
+        font-size: 43px;
+    }
+    .section_places .card_place .name_place p{
+        font-size: 24px;
+    }
+    .section_places .col_hormiga{
+        padding: 50px 20px 20px;
+    }
+    .section_places .col_hormiga h2{
+        font-size: 42px;
+    }
+    .aas{
+        margin-top: 13px;
+        height: auto;
+    }
+    .tabs_hotel ul li{
+        font-size: 12px;    
+        padding: 10px 9px;
+        margin: 0px 7px 10px 0px;
+    }
+    .p_info_text p{
+        font-size: 14px;
+    }
+    .house_rules .cuadro_rules{
+        padding: 10px;
+    }
+    .house_rules .cuadro_rules .item_rules{
+        align-items: center;
+    }
+    .house_rules .cuadro_rules .item_rules .title_rules{
+        width: 50%;
+    }
+    .house_rules .cuadro_rules .item_rules .title_rules p{
+        font-size: 12px;
+    }
+    .house_rules .cuadro_rules .item_rules .descrip_rules{
+        width: 50%;
+    }
+    .card_compras{
+        margin: 30px 0px;
+        height: auto;
+    }
+    /*SECCION EVENTOS*/
+    .section_events .col_hormiga{
+        padding: 30px 0px;
+    }
+    .section_events .service .info_service p{
+        font-size: 28px;
+    }
+    .section_events .service .info_service form{
+        margin-bottom: 40px;
+    }
+    /*SECCIÓN PAGO REALIZADO*/
+    .main_pay_done .card_pay .fondo_oscuro .calendar_add ul li{
+        width: 60px;
+        margin: 0px 5px;
+    }
+    .main_pay_done .card_pay{
+        padding: 20px 15px;
+        margin: 30px 0px;
+    }
+    .main_pay_done .info_pay{
+        padding: 20px 15px;
+    }
+    .main_pay_done .point_confirm{
+        margin: 20px 0px;
+    }
+    .main_pay_done .text_confirm_p{
+        margin: 50px 0px 0px;
+    }
+    .main_pay_done .lema_confirm{
+        margin: 20px 0px 0px;
+    }
+    .main_pay_done .lema_confirm p{
+        font-size: 30px;
+    }
+    .ubicacion_maps{
+        right: 0px;
+    }
+    .footer_all{
+        padding: 50px 0px 0px 0px;
+    }
+    .footer_all .row_mini_footer{
+        text-align: center;
+    }
  }

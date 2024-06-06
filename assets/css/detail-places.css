@@ -1,3 +1,57 @@
+.section_places .col_hormiga{
+    padding: 70px 0px 40px;
+  }
+  .section_places .col_hormiga img{
+    width: 20px;
+  }
+  .section_places .col_hormiga a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Gotham';
+  }
+  .section_places .col_hormiga a b{
+    font-family: 'Gotham Bold';
+  }
+  .section_places .col_hormiga span{
+    font-family: 'Gotham Bold';
+    font-size: 20px;
+  }
+  .section_places .col_hormiga h2{
+    font-family: 'FreightDisp Medium';
+    /* font-style: italic; */
+    font-size: 50px;
+  }
+  .section_places .tags_places ul{
+    list-style: none;
+    padding: 0px;
+  }
+  .section_places .tags_places ul li a{
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #666666;
+    text-decoration: none;
+    padding: 13px 20px;
+    border: 1px solid #929292;
+  }
+  .tabs_hotel ul {
+    padding: 0px;
+    margin: 15px 0px;
+    display: flex;  
+  flex-wrap: wrap;
+  }
+  .tabs_hotel ul li{
+    list-style: none;
+    border: 1px solid #929292;
+    color: #666666;
+    width: auto;
+    padding: 14px 23px;
+    margin: 0px 7px 10px 0px;
+    border-radius: 50px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
 .location_hotel p{ 
     font-size: 20px;
 }
@@ -47,3 +101,89 @@
 .house_rules .cuadro_rules .item_rules .descrip_rules p{
     font-size: 11px;
 }
+.card_compras{
+    box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.2);
+    height: 420px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  .card_compras .d_flex_price{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 30px 0px;
+  }
+  .card_compras .d_flex_price .price_ni{
+    font-family: 'Gotham';
+    font-size: 36px;
+    width: 50%;
+  }
+  .card_compras .d_flex_price .price_ni span{
+    font-size: 20px;
+  }
+  .card_compras .d_flex_price .star_hotel{
+    text-align: end;
+     width: 50%;
+  }
+  .card_compras .times_check{
+    
+   border: 1px solid #000000;
+   border-radius: 15px;
+  }
+  .card_compras .times_check .flex_in_out{
+    display: flex;
+  }
+  .card_compras .times_check .flex_in_out p{
+    font-family: 'Gotham Bold';
+    font-size: 15px;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+  .card_compras .times_check .flex_in_out span{
+    font-family: 'Gotham';
+    font-size: 15px;
+  }
+  .card_compras .times_check .flex_in_out .check_in_div{
+    padding: 20px 20px;
+    /* width: 50%;
+    border-right: 1px solid #000000; */
+  }
+  .card_compras .times_check .flex_in_out .check_out_div{
+    padding: 20px 20px;
+    width: 50%;
+  }
+  .card_compras .times_check .flex_guest{
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    border-top: 1px solid #000000;
+  }
+  .card_compras .times_check .flex_guest p{
+            font-family: 'Gotham Bold';
+    font-size: 15px;
+    margin: 0px;
+  }
+  .card_compras .times_check .flex_guest span{
+            font-family: 'Gotham';
+    font-size: 15px;
+  }
+  .card_compras .times_check .flex_guest div{
+    width: 50%;
+  }
+  .button_book_now{
+    margin: 30px 0px 0px;
+  }
+  .button_book_now a{
+    border: none;
+    width: 100%;
+    font-family: 'Gotham Bold';
+    padding: 18px;
+    position: relative;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #000000;        
+    font-size: 16px;
+    color: #ffffff;
+  }

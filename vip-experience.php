@@ -35,7 +35,7 @@ $servicesFolderObj = Folder::getFolderService();
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-12 col_hormiga ">
-            <div class="ali"><img src="assets/img/hormiga.svg"> <a href="index"><b>HOME</b></a> / <a href=""><b>SERVICES</b></a> / EVENTS</div>
+            <div class="ali"><img src="assets/img/hormiga.svg"> <a href="index"><b>HOME</b></a> / <a href=""><b>SERVICES</b></a> / VIP EXPERIENCE</div>
           </div>
 
           <div class="col-lg-12">
@@ -47,7 +47,7 @@ $servicesFolderObj = Folder::getFolderService();
                 <div class="service">
                   <div class="efect_text">
                     <div class="linea"></div>
-                    <p>EVENTS</p>
+                    <p>VIP EXPERIENCE</p>
                   </div>
                   <div class="info_service">
                     <p><?= $servicesFolderObj->title; ?></p>

@@ -67,7 +67,9 @@ $reserved_dates_js = json_encode($dates);
                     </a>
                     <div class="nav_iz offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">LOGO</h5>
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                                <img src="assets/img/logo.png" alt="" class="img-fluid" style="width: 130px;">
+                            </h5>
                             <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
                                 <img src="assets/img/close.svg" alt="">
                             </button>
@@ -75,43 +77,48 @@ $reserved_dates_js = json_encode($dates);
                         <div class="offcanvas-body">
                             <ul>
                                 <li><a href="index">HOME</a></li>
-                                <li><a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">BOOK NOW</a></li>
+                                <li><a href="places">BOOK NOW</a></li>
                                 <li><a href="about">ABOUT US</a></li>
                                 <li><a href="events">SERVICES</a></li>
                             </ul>
                         </div>
                         <div class="offcanvas-bottom">
-                            <ul>
+                            <!-- <ul>
                                 <li><a href="sign-in">SIGN IN</a></li>
                                 <li><a href="sign-up">SIGN UP</a></li>
-                            </ul>
+                            </ul> -->
                             <div class="d-flex lenguaje">
                                 <div class=""><a class="me-3" href="index">EN </a></div>
                                 <div class="me-3" style="color: #ffffff"> / </div>
                                 <div class=""><a class="me-3" href="es">ES </a></div>
                             </div>
                             <div class="d-flex mt-4">
-                                <a href="" class=" redes_menu">INSTAGRAM</a>
-                                <a href="" class=" redes_menu">FACEBOOK</a>
-                                <a href="" class=" redes_menu">LINKEDIN</a>
+                                <a href="https://www.instagram.com/solistiq.mx/" class=" redes_menu">INSTAGRAM</a>
+                                <!-- <a href="" class=" redes_menu">FACEBOOK</a>
+                                <a href="" class=" redes_menu">LINKEDIN</a> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="btn_boook_banner ">
-                    <a class="book_now_a" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <a href="places" class="book_now_a">
                         BOOK NOW
                         <img src="assets/img/btn-book-now.svg" alt="" class="blanco">
                         <img src="assets/svg/dark.svg" alt="" class="negro">
                     </a>
+                    <!-- <a class="book_now_a" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        BOOK NOW
+                        <img src="assets/img/btn-book-now.svg" alt="" class="blanco">
+                        <img src="assets/svg/dark.svg" alt="" class="negro">
+                    </a> -->
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5> -->
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body px-5">
-                            <h3>WELCOME TO ESENCIA</h3>
-                            <p>Enjoy your stay at <br> Esencia Tulum</p>
+                            <h3>WELCOME TO SOLISTIQ</h3>
+                            <p>Enjoy your stay at <br> Solistiq Tulum</p>
                             <form class="mt-5" id="availability-space" method="POST" enctype="multipart/form-data">
                                 <div class="dates_input">
                                     <div class="d-flex mb-3">
@@ -164,7 +171,9 @@ $reserved_dates_js = json_encode($dates);
                 <div class="col-lg-5 position-relative">
                     <div class="card_about">
                         <h3 class="mb-4">ABOUT OUR HOTEL</h3>
-                         <?= $homeObj->short_text_about ?> 
+                         <div class="mb-4">
+                            <?= $homeObj->short_text_about ?> 
+                         </div>
 
                         <a href="about" class="read_more mt-5">READ MORE <!-- <img src="assets/img/izquierda.svg" class="ms-3"> --></a>
                     </div>

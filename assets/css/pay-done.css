@@ -1,0 +1,182 @@
+.main_pay_done .card_pay{
+    margin: 0px 0px 20px 0px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+  }
+  .main_pay_done .card_pay .booking_confirmed{
+    display: flex;
+  }
+  .main_pay_done .card_pay .booking_confirmed .done_div{
+    width: 50%;
+  }
+  .main_pay_done .card_pay .booking_confirmed .banner_div{
+    text-align: end;
+    width: 50%;
+  }    
+  .main_pay_done .card_pay .booking_confirmed p{
+    margin: 10px 0px 0px 0px;
+    font-size: 22px;
+    font-family: 'Gotham';
+  }
+  .main_pay_done .card_pay .fondo_oscuro{
+    margin: 20px 0px 0px 0px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #D9D9D9;
+          font-family: 'Gotham';
+    color: #666666;
+    font-size: 16px;
+  }
+  .main_pay_done .card_pay .fondo_oscuro .flex_items_check{
+
+    margin: 0px 0px 15px 0px;
+    display: flex;
+  }
+  .main_pay_done .card_pay .fondo_oscuro .flex_items_check .item_chec_text{
+    width: 50%;
+  }
+  .main_pay_done .card_pay .fondo_oscuro .flex_items_check .item_chec_date{
+    width: 50%;
+    text-align: end;
+  }
+  .main_pay_done .card_pay .fondo_oscuro .calendar_add ul{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    list-style: none;
+    padding: 0px;
+  }
+  .main_pay_done .card_pay .fondo_oscuro .calendar_add ul li{
+    width: 84px;
+        margin: 0px 10px;
+  }
+  .main_pay_done .card_pay .fondo_oscuro .calendar_add ul li a{
+    border: 1px solid #6C6868;
+    padding: 5px 20px;
+    border-radius: 50px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .main_pay_done .info_pay{
+    border: 3px solid #ffffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+  }
+  .main_pay_done .info_pay .ubicacion_detail{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 15px;
+    margin: 0px 0px 20px 0px;
+  }
+  .main_pay_done .info_pay .ubicacion_detail .name_ubis{
+    width: 75%;
+  }
+  .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis{
+    display: flex;
+    justify-content: space-between !important;
+    padding: 0px 10px;
+  }
+  .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis .top_text{
+    padding-top: 20px;
+  }
+  .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis p{
+    font-family: 'Gotham';
+    font-size: 14px;
+    margin: 0px;
+  }
+  .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis span{
+         font-family: 'Gotham Bold';
+    font-size: 16px;
+  }
+  .main_pay_done .info_pay .ubicacion_detail .name_ubis .div_ubis .end_text{
+    width: 50%;
+    text-align: end;
+  }
+  .main_pay_done .info_pay .method_pay{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px 20px;
+  }
+  .main_pay_done .info_pay .method_pay div{
+    width: 33%;
+  }
+  .icon_pay a{
+    font-family: 'Gotham';
+    font-size: 12px;
+    text-decoration: none;
+    color: #666666;
+    border: 1px solid #6C6868;
+    border-radius: 50px;
+    padding: 10px 20px;
+  }
+  .name_pay p{
+    font-family: 'Gotham Bold';
+    font-size: 16px;
+    margin: 0px;
+  }
+  .cofirm_pay{
+    font-family: 'Gotham';
+    font-size: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px;
+  }
+  .main_pay_done .info_pay .flex_detail a{
+    font-family: 'Gotham Bold';
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    width: 50%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 0px;
+  }
+  .main_pay_done .point_confirm{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    width: 190px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .main_pay_done .point_confirm span{
+    font-family: 'Gotham Bold';
+    font-size: 14px;
+  }
+  .main_pay_done .point_confirm p{
+    font-family: 'Gotham';
+    font-size: 15px;
+    margin: 0px;
+  }
+  .main_pay_done .text_confirm_p {
+    margin: 150px 0px 0px;
+  }
+  .main_pay_done .text_confirm_p p{
+    font-family: 'Gotham';
+    font-size: 16px;
+    width: 250px;
+    color: #ffffff;
+  }
+  .main_pay_done .lema_confirm{
+    margin: 200px 0px 0px;
+    display: flex;
+    align-items: center;
+  }
+  .main_pay_done .lema_confirm p{
+    font-family: 'FreightDisp Medium';
+    color: #FFFFFF;
+    font-size: 60px;
+    margin: 0px;
+  }
