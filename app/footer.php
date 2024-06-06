@@ -38,9 +38,9 @@
 
                                 <ul>
                                     <!-- <li><a href="#" class="hov">Terms and Conditions</a></li> -->
-                                    <li><a href="#" class="hov">Terms of Service</a></li>
-                                    <li><a href="#" class="hov">Privacy Policies</a></li>
-                                    <li><a href="#" class="hov">Cancellation Policies</a></li>
+                                    <li><a href="terms-of-service" class="hov">Terms of Service</a></li>
+                                    <li><a href="privacy-policies" class="hov">Privacy Policies</a></li>
+                                    <li><a href="cancellation-policies" class="hov">Cancellation Policies</a></li>
                                 </ul>
                             </div>
                         </div>
