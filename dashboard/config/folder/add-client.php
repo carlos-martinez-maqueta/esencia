@@ -126,12 +126,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host = 'mail.conexacoworking.com'; // Cambia esto al servidor SMTP de tu proveedor de correo
         $mail->SMTPAuth = true;
-        $mail->Username = 'conexaoficial@conexacoworking.com'; // Tu dirección de correo
+        $mail->Username = 'velasquezparedesjavier@gmail.com'; // Tu dirección de correo
         $mail->Password = 'iLyMQmswFH9B'; // Tu contraseña
         $mail->SMTPSecure = 'ssl'; // Puedes usar 'ssl' en lugar de 'tls' si es necesario
         $mail->Port = 465; // El puerto SMTP de tu proveedor de correo
 
-        $mail->setFrom('conexaoficial@conexacoworking.com', 'NEW REGISTRATION NOTIFICATION');
+        $mail->setFrom('velasquezparedesjavier@gmail.com', 'NEW REGISTRATION NOTIFICATION');
         // Agregar el destinatario principal
         $mail->addAddress($emailPrincipal);
         // Agregar el destinatario del usuario
