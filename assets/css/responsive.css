@@ -70,6 +70,12 @@
         margin: 30px 0px;
         height: auto;
     }
+    .card_compras .d_flex_price .price_ni{
+        font-size: 31px;
+    }
+    .card_compras .d_flex_price .star_hotel img{
+        width: 70%;
+    }
     /*SECCION EVENTOS*/
     .section_events .col_hormiga{
         padding: 30px 0px;

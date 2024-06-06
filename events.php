@@ -38,8 +38,8 @@ $servicesFolderObj = Folder::getFolderService();
             <div class="ali"><img src="assets/img/hormiga.svg"> <a href="index"><b>HOME</b></a> / <a href=""><b>SERVICES</b></a> / EVENTS</div>
           </div>
 
-          <div class="col-lg-12">
-            <div class="row">
+          <div class="col-lg-12 ">
+            <div class="row ">
               <div class="col-lg-5 order-lg-1 order-2">
                 <div><img src="dashboard/files/service/<?= $servicesFolderObj->banner; ?>" class="img-fluid"></div>
               </div>
@@ -52,7 +52,7 @@ $servicesFolderObj = Folder::getFolderService();
                   <div class="info_service">
                     <p><?= $servicesFolderObj->title; ?></p>
 
-                    <span>
+                    <span class="span">
                       <?= $servicesFolderObj->description; ?>
                     </span>
 

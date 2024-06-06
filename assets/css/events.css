@@ -36,9 +36,12 @@
   right: 0px;
   top: -4px;
 }
-.section_events .service .info_service span{
+.section_events .service .info_service .span p{
   font-family: 'Gotham';
   font-size: 14px;
+  text-transform: capitalize;
+  line-height: normal;
+  letter-spacing: normal;
 }
 .section_events .service .info_service form{
   margin-top: 40px;

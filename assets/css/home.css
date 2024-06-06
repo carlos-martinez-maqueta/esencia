@@ -23,10 +23,10 @@ body{
     cursor: pointer;
 }
 .section_banner .cont_banner .fondo_banner .menu_banner .nav_iz{
-    background-color: #000000a1;
+    background-color: #000000cc;
 }
 .section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-header{
-    padding: 30px 50px !important; 
+    padding: 0px 30px !important;
 }
 .section_banner .cont_banner .fondo_banner .menu_banner .nav_iz .offcanvas-header h5{
     color: #ffffff;
@@ -189,7 +189,7 @@ border: 0px;
 }
 .section_about .card_about{
     background-color: #ffffff;
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     position: absolute;
     width: 100%;
@@ -202,7 +202,8 @@ border: 0px;
     font-size: 36px;
 }
 .section_about .card_about p{
-    margin-bottom: 30px !important;
+    margin-bottom: 15px !important;
+    font-size: 14px;
 }
 .section_about .card_about .read_more{
     font-family: 'Gotham'; 

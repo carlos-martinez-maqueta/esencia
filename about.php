@@ -94,6 +94,9 @@ $equipmentFolderObj = Folder::getFolderEquipment();
     font-family: 'Gotham';
     font-size: 16px;
   }
+  .section_about .bann_about img{
+    border-radius: 15px;
+  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -115,7 +118,7 @@ $equipmentFolderObj = Folder::getFolderEquipment();
 
             <span><?= $aboutFolderObj->description ?></span>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 bann_about">
             <img src="dashboard/files/about/<?= $aboutFolderObj->banner ?>" class="w-100 my-lg-0 my-4">
           </div>
         </div>
@@ -125,15 +128,15 @@ $equipmentFolderObj = Folder::getFolderEquipment();
             <h5 class="p_lineas">¡MEET OUR TEAM!</h5>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span>
           </div>
-          <?php foreach ($equipmentFolderObj as $result) : ?>
+          <?php //foreach ($equipmentFolderObj as $result) : ?>
             <div class="col-lg-3 mt-5">
               <div class="car_team">
                 <img src="assets/img/Avatar.png" class="img-fluid mb-3">
-                <p><?= $result->name ?></p>
-                <p><?= $result->charge ?></p>
+                <p><?//= $result->name ?></p>
+                <p><?//= $result->charge ?></p>
               </div>
             </div>
-          <?php endforeach; ?>
+          <?php // endforeach; ?>
         </div> -->
       </div>
     </section>

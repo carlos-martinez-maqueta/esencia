@@ -60,7 +60,7 @@
     font-size: 15px;
 }
 .aas{
-    height: 50%;
+    height: 49%;
 }
 .aas img{
     height: 100%;
@@ -186,4 +186,9 @@
     background-color: #000000;        
     font-size: 16px;
     color: #ffffff;
+  }
+
+
+  .section_places .imagenes_detalle img{
+    border-radius: 15px;
   }

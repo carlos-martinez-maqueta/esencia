@@ -79,7 +79,8 @@ $reserved_dates_js = json_encode($dates);
                                 <li><a href="index">HOME</a></li>
                                 <li><a href="places">BOOK NOW</a></li>
                                 <li><a href="about">ABOUT US</a></li>
-                                <li><a href="events">SERVICES</a></li>
+                                <li><a href="events">EVENTS</a></li>
+                                <li><a href="vip-experience">VIP EXPERIENCE</a></li>
                             </ul>
                         </div>
                         <div class="offcanvas-bottom">

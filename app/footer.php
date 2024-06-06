@@ -15,7 +15,7 @@
                                 <h4>SERVICES</h4>
 
                                 <ul>
-                                    <li><a href="#" class="hov">Vip Experience</a></li>
+                                    <li><a href="vip-experience" class="hov">Vip Experience</a></li>
                                     <li><a href="events" class="hov">Events & Productions</a></li>
                                     <!-- <li><a href="vip-experience" class="hov">Vip Experience</a></li> -->
                                 </ul>
@@ -28,7 +28,7 @@
                                 <ul>
                                     <li><a href="about" class="hov">About Us</a></li>
                                     <!-- <li><a href="#" class="hov">Blog & News</a></li> -->
-                                    <li><a href="#" class="hov">Work with Us</a></li>
+                                    <!-- <li><a href="#" class="hov">Work with Us</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                 <h4>CONTACT</h4>
 
                                 <ul>
-                                    <li><a href="#" class="hov">F.A.Q</a></li>
+                                    <li><a href="faq" class="hov">F.A.Q</a></li>
                                     <li><a href="#" class="hov">sales@esencia-house.com</a></li>
                                 </ul>
                             </div>

@@ -34,15 +34,15 @@ include 'dashboard/class/user.php';
                 <h2 class="mt-2">CASA SOLARA</h2>
               </div>
             </div>
-            <div class="row mb-4">
+            <div class="row mb-4 imagenes_detalle">
               <div class="col-lg-8 col-12">
-                <div class="">
-                  <img src="assets/img-solistiq/detail_1.png" alt="" class="img-fluid">
+                <div class="w-100 h-100">
+                  <img src="assets/img-solistiq/detail_1.png" alt="" class="img-fluid h-100">
                 </div>
               </div>
               <div class="col-lg-4 col-12">
-                <div class="row aas mb-2">
-                  <div class="col-12"><img src="assets/img-solistiq/detail_2.png" alt="" class="img-fluid"></div>
+                <div class="row aas mb-2 ">
+                  <div class="col-12 h-100"><img src="assets/img-solistiq/detail_2.png" alt="" class="img-fluid w-100"></div>
                 </div>
                 <div class="row aas">
                   <div class="col-6"><img src="assets/img-solistiq/detail_3.png" alt="" class="img-fluid"></div>
@@ -71,8 +71,56 @@ include 'dashboard/class/user.php';
                   </ul>
                 </div>
                 <div class="p_info_text">
-                  <p>Villas Esencia Tulum is located in Tulum, Quintana Roo, near Bus Terminal. It offers accommodation with free WiFi, free private parking and access to the indoor pool. The villa offers a terrace, garden views, a seating area, a flat-screen TV, a fully equipped kitchen with a refrigerator and a microwave, and a private bathroom with a shower and free toiletries. A toaster and coffee maker are also provided. There is also a garden ideal for relaxing. Tulum Archaeological Zone is 6.1 km from the accommodation, and Tulum National Park is 5.3 km away. The nearest airport (Tulum International Airport) is 38 km from the accommodation, which offers a paid shuttle service to and from the airport.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                  <p>
+                  Experience your senses at this one of a kind villa. 
+                  Sleeps Two 3 bedroom villas combine to sleep a total of 12.
+                  Located steps fromt he famous Holistika hotel enjoy breakfast
+                  or yoga- our guests receive access to Gitano Ahau and Soy Tulum beach clubs.
+                  Minutes from Tulum Centro and Beach. Grocery Service Chefs anything you need to plan your dream trip. 
+                  <br>
+                  <br>
+
+                  2 combined 3 bedroom villas with connected backyards. 
+                  Each villa is 3 bedrooms with 3.5 bathrooms with fully equipped kitchens,
+                  full sized pools and fenced backyards
+                  <br>
+                  <br>
+                  Holisika is a captivating location tucked into the jungle just minutes from the beach and Tulum Centro,.
+                  Walk to breakfast at Holistika hotel, take a daily yoga class and enjoy their artwalk.
+                  <br>
+                  <br>
+                  Available via chat and in person locally if needed. 
+                  After booking you will receive an optional link to check in via our exclusive guest app.
+                  Here you will find maps links, access info, area/general info be able to make beach club reservations,
+                  book concierge services and more!
+                  <br>
+                  <br>
+                  Tulum is growing by leaps and bounds! so it is normal to see constructions in the surroundings.
+                  Fortunately, there are not constructions adjoining us.
+                  <br><br>
+                  Some streets are not yet paved around us, Tulum is a developing area, 
+                  there are some bumpy roads but any car can handle.
+                  <br><br>
+                  Power outages are not uncommon in Tulum right now. 
+                  We do our best to keep our guests comfortable when this happens but want you to be aware of the possibility in advance. 
+                  If the power goes out often the water is connected. 
+                  These services are typically restored in a couple of hours.
+                  <br><br>
+                  Make reasonable use of towels as we do not change towels daily. 
+                  Keep them as clean as you would like to receive them. 
+                  If the towels are stained, damaged or lost, you will be charged the cost of its replacement.
+                  <br>
+                  <br>
+                  The insects are also part of life, try to accept them. 
+                  It is possible to find them inside the facilities (Perfectly normal with all the jungle around us). 
+                  They are not representing an unclean space, 
+                  instead they are part of an ecosystem so please avoid mistreating or killing them and be aware that 
+                  if you leave food exposed, they are curious and will try to approach it. Please call us if you need assistance.
+                  <br>
+                  <br>
+                  Thank you for your understanding                    
+                  </p>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p> -->
                 </div> 
                 
                 <div class="house_rules">
@@ -85,7 +133,7 @@ include 'dashboard/class/user.php';
                           <p><img src="assets/img/rules/checkin.svg" class="me-3" alt="">Check-in</p>
                         </div>
                         <div class="descrip_rules">
-                          <p>From 3:00 PM to 11:00 PM</p>
+                          <p>3:00 PM</p>
                           <p>You need to let the property know what time you'll be arriving in advance.</p>
                         </div>
                       </div>
@@ -94,7 +142,7 @@ include 'dashboard/class/user.php';
                           <p><img src="assets/img/rules/checkout.svg" class="me-3" alt="">Check-out</p>
                         </div>
                         <div class="descrip_rules">
-                          <p>From 3:00 PM to 11:00 PM</p>
+                          <p>11:00 AM</p>
                         </div>
                       </div>
                       <div class="item_rules">

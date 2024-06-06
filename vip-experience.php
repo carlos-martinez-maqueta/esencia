@@ -52,7 +52,7 @@ $servicesFolderObj = Folder::getFolderService();
                   <div class="info_service">
                     <p><?= $servicesFolderObj->title; ?></p>
 
-                    <span>
+                    <span class="span">
                       <?= $servicesFolderObj->description; ?>
                     </span>
 
